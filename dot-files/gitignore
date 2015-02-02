@@ -1,0 +1,20 @@
+# Folder view configuration files
+.DS_Store
+Desktop.ini
+
+# Thumbnail cache files
+._*
+Thumbs.db
+
+# Files that might appear on external disks
+.fseventsd
+.Spotlight-V100
+.Trashes
+
+# Miscellaneous application config files
+node_modules
+bower_components
+.idea
+.sass-cache
+config.codekit
+vssver2.scc
