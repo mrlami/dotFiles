@@ -13,13 +13,13 @@ function rmd() {
 
 #change default shell and change current prompt session to new shell
 function cs() {
-    if [ "$1" == 'bash' ]
+    if [ "$1" = "bash" ]
     then
         echo ' »» swithing shell to bash'
         chsh -s `which bash`
         bash
         source ~/.bashrc
-    elif [ "$1" == 'zsh' ]
+    elif [ "$1" = "zsh" ]
     then
         echo ' »» swithing shell to zsh'
         chsh -s `which zsh`
