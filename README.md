@@ -150,7 +150,7 @@ Run individual install commands
 - appcode
 - xamarin-studio
 
-**Others *(un-comment cask.sh to install these)***
+**Others** *(un-comment lines from cask.sh to install these)*
 
 - gitbook
 - microsoft-office
