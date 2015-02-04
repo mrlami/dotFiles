@@ -27,6 +27,7 @@ brew install php56-mcrypt
 
 brew install phpunit
 brew install codeception
+brew install behat
 
 
 brew cleanup

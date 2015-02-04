@@ -63,19 +63,18 @@ brew cask install xamarin-studio
 
 #others
 brew cask install gitbook
-brew cask install apptivate
+#brew cask microsoft-office
+#brew cask thinkorswim
 
 #brew cask install appcleaner
-#brew cask install cocktail
 #brew cask install cinch
 #brew cask install sizeup
+#brew cask install cocktail
 #brew cask install totalfinder
-
 
 #brew cask install bittorrent-sync
 #brew cask install utorrent
 #brew cask install postbox
-#brew cask install airmail-beta
 
 
 brew cask cleanup

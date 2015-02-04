@@ -4,14 +4,12 @@ dotFiles
 Scripts I use to setup my mac terminal (& mac complete system) anytime I wipe it clean which I do quite often.  It borrows from barryclark/bashstrap, andrew8088/dotfiles, and kevinSuttle/dotfiles
 
 ### Features
-- Colored 'ls'
-- Syntax highlighted 'cat'
-- Faster directory navigation with z.sh
-- Customized bash prompt line
-	- Git branch status inline
-	- ☠ ahoy! An easily customizable symbol
-	- Stripped out extraneous text
-- Customized zsh with prezto ***(coming soon)***
+- Customized ***bash***
+    - Colored file listing 'ls'
+    - Syntax highlighted 'cat'
+    - Faster directory navigation with z.sh
+    - Customized bash prompt line (with Git branch status, and customizable symbol ⚡)
+- Customized ***zsh*** with [prezto](https://github.com/sorin-ionescu/prezto)
 - ```init_mac_settings()``` function to set misc mac settings - e.g. timezone
 - ```clean_mac_setup()``` function ***(NOTE: xcode & xcode command-line needed)***
 	- Installs Homebrew and Cask
@@ -36,6 +34,8 @@ Scripts I use to setup my mac terminal (& mac complete system) anytime I wipe it
 2. Clone to your home directory:
 
 		git clone https://github.com/mrlami/dotFiles.git ~/_bin
+
+	**NOTE: *You must clone to ~/bin***
 
 3. Run install script:
 
@@ -74,7 +74,7 @@ Run individual install commands
     install_tmuxifier
     install_hushlogin
     install_pygments
-    
+
     #initialize mac settings
     init_mac_settings
 
@@ -101,15 +101,16 @@ Run individual install commands
 
 - bartender
 - caffeine
-- flux
 - moom
-- totalfinder
-- wallpaper-wizard
-- alfred
 - coconutbattery
+- wallpaper-wizard
+- xtrafinder
+- alfred
 - iterm2
 - keka
 - namechanger
+- snagit
+- camtasia
 
 **Media**
 
@@ -139,23 +140,24 @@ Run individual install commands
 - tower
 - transmit
 
-*Development*
+**Development**
 
-- sublime-text-3 
-- kaleidoscope 
-- codekit 
-- sketch 
-- phpstorm 
-- appcode 
+- sublime-text-3
+- kaleidoscope
+- codekit
+- sketch
+- phpstorm
+- appcode
 - xamarin-studio
 
-**Others *(commented out)***
+**Others *(un-comment cask.sh to install these)***
 
-- gitbook 
-- postbox
-- airmail-beta
+- gitbook
+- microsoft-office
+- thinkorswim
 - cinch
 - sizeup
-- utorrent
-- xtrafinder
 - cocktail
+- totalfinder
+- postbox
+- utorrent

@@ -6,6 +6,34 @@ function enter() {
     cd $1
 }
 
+#remove a directory recursively
+function rmd() {
+    rm -rf $1
+}
+
+#change default shell and change current prompt session to new shell
+function cs() {
+    if [ "$1" == 'bash' ]
+    then
+        echo ' »» swithing shell to bash'
+        chsh -s `which bash`
+        bash
+        source ~/.bashrc
+    elif [ "$1" == 'zsh' ]
+    then
+        echo ' »» swithing shell to zsh'
+        chsh -s `which zsh`
+        zsh
+        source ~/.zshrc
+    else
+        echo '...........'
+        echo ' you have to pass either "bash" or "zsh" to switch shell (cs) command as parameters'
+        echo ' »» cs bash'
+        echo ' »» cs zsh'
+        echo '...........'
+    fi
+}
+
 function enable_tmux_iterm() {
     export TMUXIFIER_TMUX_ITERM_ATTACH="-CC"
 }
@@ -73,8 +101,46 @@ function install_composer() {
 }
 
 function install_tmuxifier() {
-    sudo rm -rf ~/.tmuxifier
+    rm -rf ~/.tmuxifier
     git clone https://github.com/jimeh/tmuxifier.git ~/.tmuxifier
+}
+
+function update_tmuxifier() {
+    cd ~/.tmuxifier
+    git pull
+}
+
+function install_prezto() {
+    uninstall_prezto
+    git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+
+    # setopt EXTENDED_GLOB
+    # for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+    #     ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+    # done
+
+    for f in ~/.zprezto/runcoms/*; do
+        if [ "${f##*/}" != "README.md" ]; then
+            ln -sf $f ~/.${f##*/}
+        fi
+    done
+
+    #modules    » history-substring-search, git, node, haskell, osx, syntax-highlighting, wakeonlan
+    #themes     » sorin, steeef, giddie
+
+    #remap & source zshrc dotfile
+    ln -sf ~/_bin/dot-files/zshrc ~/.zshrc
+    source ~/.zshrc
+}
+
+function uninstall_prezto() {
+    rm -rf ~/.zprezto
+    rm -f ~/.zlogin ~/.zlogout ~/.zpreztorc ~/.zprofile ~/.zshenv
+}
+
+function update_prezto() {
+    cd ~/.prezto
+    git pull && git submodule update --init --recursive
 }
 
 function install_hushlogin() {

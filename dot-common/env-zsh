@@ -1,3 +1,6 @@
 ## environment - zsh ##
 
-PROMPT="retina-mrlami⚡ "
+if [ ! -d ~/.zprezto ]; then
+    PROMPT="retina-mrlami⚡ "
+    echo 'got here...'
+fi

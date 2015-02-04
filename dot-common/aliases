@@ -49,7 +49,7 @@ alias b='brew'
 alias bs='brew search'
 alias bin='brew install'
 alias bun='brew uninstall'
-alias bcl='brew update && brew upgrade && brew cleanup && brew upgrade brew-cask'
+alias bcl='brew update && brew upgrade && brew cleanup'
 alias bc='brew cask'
 alias bcs='brew cask search'
 alias bcin='brew cask install'
@@ -60,8 +60,8 @@ alias bccl='brew cask update && brew cask cleanup'
 alias mux='tmuxifier'
 
 ## paths ##
+export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
+export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 export TMUXIFIER_LAYOUT_PATH="$HOME/_bin/tmux-layouts"
 eval "$(tmuxifier init -)"
-export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
-export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
