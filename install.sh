@@ -11,14 +11,16 @@ ln -sf ~/_bin/dot-files/bash_profile ~/.bash_profile #bash
 ln -sf ~/_bin/dot-files/gitconfig ~/.gitconfig #git
 ln -sf ~/_bin/dot-files/gitignore ~/.gitignore #gitignore
 
-ln -sf ~/_bin/dot-files/vimrc ~/.vimrc #vim
 ln -sf ~/_bin/dot-files/zshrc ~/.zshrc #zsh
+ln -sf ~/_bin/dot-files/vimrc ~/.vimrc #vim
+ln -sf ~/_bin/dot-files/nanorc ~/.nanorc #nano
 
-
+# source rc files
 echo "Sourcing aliased dotfiles..."
 source ~/.bashrc
 source ~/.zshrc
 install_pygments
+
 
 echo ''
 echo '=============================================================='
@@ -34,14 +36,3 @@ echo 'run "install_tmuxifier" - to install tmuxifier'
 echo 'run "install_hushlogin" - to install hushlogin'
 echo 'run "install_pygments" - to install pygments'
 echo '=============================================================='
-
-
-
-
-
-
-
-
-
-
-

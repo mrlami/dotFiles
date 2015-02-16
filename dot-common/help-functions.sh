@@ -34,6 +34,10 @@ function cs() {
     fi
 }
 
+function update_hosts_file() {
+    sudo bash -c 'cat ~/_ssh/hosts > /private/etc/hosts'
+}
+
 function enable_tmux_iterm() {
     export TMUXIFIER_TMUX_ITERM_ATTACH="-CC"
 }

@@ -42,6 +42,7 @@ brew cask install virtualbox
 brew cask install vagrant
 brew cask install hipchat
 brew cask install slack
+brew cask install screenhero
 
 brew cask install cornerstone
 brew cask install navicat-premium
@@ -75,6 +76,8 @@ brew cask install gitbook
 #brew cask install bittorrent-sync
 #brew cask install utorrent
 #brew cask install postbox
+
+#brew cask install xquartz inkscape
 
 
 brew cask cleanup

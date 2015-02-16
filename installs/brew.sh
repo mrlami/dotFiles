@@ -16,6 +16,9 @@ brew install gawk
 brew install tmux
 brew install tree
 brew install wget
+brew install nano
+
+brew install ngrok
 
 brew install git
 brew install node

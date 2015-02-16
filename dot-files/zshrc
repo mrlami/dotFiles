@@ -3,6 +3,6 @@
 if [ -d ~/.zprezto ]; then
     source ~/.zprezto/runcoms/zshrc
 fi
-source ~/_bin/dot-common/aliases
-source ~/_bin/dot-common/env-zsh
+source ~/_bin/dot-common/aliases.sh
+source ~/_bin/dot-common/env-zsh.sh
 source ~/_bin/dot-common/help-functions.sh

@@ -22,10 +22,15 @@ alias .....="cd ../../../.."
 alias h="cd ~/"
 alias d="cd ~/Downloads"
 alias a="cd /apps"
+alias code="cd /apps/code"
+alias dl="cd /apps/datalogiq"
+alias mx="cd /apps/munetrix"
+alias sgi="cd /apps/scigames"
 
 # Shortcuts for misc commands
 alias cl="clear"
 alias p="ping -c 5"
+alias server="python -m SimpleHTTPServer 8000"
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
@@ -36,6 +41,7 @@ alias c='pygmentize -O style=monokai -f console256 -g'
 # Git // install Git first
 alias g='git'
 alias gs='git status'
+alias gl='git log --graph --decorate --pretty=oneline --abbrev-commit'
 alias ga='git add --all'
 alias gc='git commit -m' # requires you to type a commit message
 alias gp='git push'
@@ -43,6 +49,16 @@ alias gpo='git push origin master'
 alias gpl='git pull'
 alias gplo='git pull origin master'
 alias gclone='git clone'
+
+# Vagrant
+alias v='vagrant'
+alias vu='vagrant up'
+alias vs='vagrant ssh'
+alias vd='vagrant destroy -f'
+alias vh='vagrant halt'
+alias vsus='vagrant suspend'
+alias vres='vagrant resume'
+alias vsta='vagrant status'
 
 # Homebrew & Cask
 alias b='brew'

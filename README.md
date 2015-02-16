@@ -1,7 +1,7 @@
 dotFiles
 =========
 
-Scripts I use to setup my mac terminal (& mac complete system) anytime I wipe it clean which I do quite often.  It borrows from barryclark/bashstrap, andrew8088/dotfiles, and kevinSuttle/dotfiles
+Scripts I use to setup my mac terminal (& complete system) when I wipe it clean which happens quite often.  It borrows from barryclark/bashstrap, andrew8088/dotfiles, and kevinSuttle/dotfiles.
 
 ### Features
 - Customized ***bash***
@@ -80,9 +80,11 @@ Run individual install commands
 
 ####Default Homebrew Installs
 - ack
+- gawk
+- tmux
 - tree
 - wget
-- tmux
+- ngrok
 - git
 - node
 - redis
@@ -118,6 +120,12 @@ Run individual install commands
 - handbrake
 - vlc
 
+**Messaging**
+
+- hipchat
+- slack
+- screenhero
+
 **Cloud/Internet**
 
 - bittorrent-sync
@@ -132,8 +140,6 @@ Run individual install commands
 - vmware-fusion
 - virtualbox
 - vagrant
-- hipchat
-- slack
 - cornerstone
 - navicat-premium
 - pgadmin3
@@ -161,3 +167,5 @@ Run individual install commands
 - totalfinder
 - postbox
 - utorrent
+
+- xquartz inkscape

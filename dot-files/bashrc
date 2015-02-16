@@ -1,7 +1,7 @@
 
 # source
-source ~/_bin/dot-common/aliases
-source ~/_bin/dot-common/env-bash
+source ~/_bin/dot-common/aliases.sh
+source ~/_bin/dot-common/env-bash.sh
 source ~/_bin/dot-common/help-functions.sh
 
 # init z! (https://github.com/rupa/z)
