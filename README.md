@@ -91,8 +91,10 @@ Run individual install commands
 - php56
 - php56-pdo-pgsql
 - php56-mcrypt
+- boris
 - phpunit
 - codeception
+- behat
 
 ####Default NPM Installs
 - bower
@@ -113,6 +115,7 @@ Run individual install commands
 - namechanger
 - snagit
 - camtasia
+- screenflow
 
 **Media**
 
@@ -128,10 +131,10 @@ Run individual install commands
 
 **Cloud/Internet**
 
-- bittorrent-sync
 - dropbox
 - google-drive
 - yandexdisk
+- expandrive
 - google-chrome
 - transmission
 
@@ -148,24 +151,31 @@ Run individual install commands
 
 **Development**
 
-- sublime-text-3
 - kaleidoscope
 - codekit
 - sketch
+- sublime-text-3
 - phpstorm
+- intellij-idea
 - appcode
 - xamarin-studio
 
-**Others** *(un-comment lines from cask.sh to install these)*
+**Office**
 
 - gitbook
+- typed
 - microsoft-office
 - thinkorswim
+
+**Others** *(un-comment lines from cask.sh to install these)*
+
+- appcleaner
 - cinch
 - sizeup
 - cocktail
+- liteicon
 - totalfinder
 - postbox
+- bittorrent-sync
 - utorrent
-
 - xquartz inkscape

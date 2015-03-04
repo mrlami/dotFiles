@@ -4,5 +4,5 @@ source ~/_bin/dot-common/aliases.sh
 source ~/_bin/dot-common/env-bash.sh
 source ~/_bin/dot-common/help-functions.sh
 
-# init z! (https://github.com/rupa/z)
-. ~/_bin/z.sh
+# init z - https://github.com/rupa/z
+source ~/_bin/dot-common/z.sh

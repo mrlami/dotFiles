@@ -28,6 +28,7 @@ brew install php56
 brew install php56-pdo-pgsql
 brew install php56-mcrypt
 
+brew install boris
 brew install phpunit
 brew install codeception
 brew install behat

@@ -20,17 +20,22 @@ alias .....="cd ../../../.."
 
 # Shortcuts to folders
 alias h="cd ~/"
-alias d="cd ~/Downloads"
+alias hb="cd ~/_bin"
+alias hs="cd ~/_ssh"
+alias hd="cd ~/Downloads"
 alias a="cd /apps"
-alias code="cd /apps/code"
-alias dl="cd /apps/datalogiq"
-alias mx="cd /apps/munetrix"
-alias sgi="cd /apps/scigames"
+alias aco="cd /apps/code"
+alias adq="cd /apps/datalogiq"
+alias amx="cd /apps/munetrix"
+alias asg="cd /apps/scigames"
 
 # Shortcuts for misc commands
 alias cl="clear"
 alias p="ping -c 5"
-alias server="python -m SimpleHTTPServer 8000"
+alias serve="python -m SimpleHTTPServer 8000"
+alias aliases="c ~/_bin/dot-common/aliases.sh"
+alias sourcebash="source ~/.bashrc"
+alias sourcebin=". ~/_bin/install.sh"
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
@@ -60,6 +65,11 @@ alias vsus='vagrant suspend'
 alias vres='vagrant resume'
 alias vsta='vagrant status'
 
+# Nodejs & NPM
+alias npmgls='npm list -g --depth=0'
+alias npmgin='npm install -g'
+alias npmgun='npm uninstall -g'
+
 # Homebrew & Cask
 alias b='brew'
 alias bs='brew search'
@@ -76,6 +86,7 @@ alias bccl='brew cask update && brew cask cleanup'
 alias mux='tmuxifier'
 
 ## paths ##
+export PATH="/usr/local/sbin:$PATH"
 export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
 export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
 export PATH="$HOME/.tmuxifier/bin:$PATH"

@@ -9,9 +9,7 @@ brew cask upgrade
 
 
 # utility apps
-brew cask install bartender
 brew cask install caffeine
-brew cask install flux
 brew cask install moom
 brew cask install xtrafinder
 brew cask install wallpaper-wizard
@@ -22,6 +20,10 @@ brew cask install iterm2
 brew cask install keka
 brew cask install namechanger
 brew cask install imageoptim
+
+brew cask install snagit
+brew cask install camtasia
+brew cask install screenflow
 
 # media apps
 brew cask install 4k-video-downloader
@@ -51,26 +53,30 @@ brew cask install tower
 brew cask install transmit
 
 # dev tools
-brew cask install sublime-text-3
 brew cask install kaleidoscope
 brew cask install codekit
 
 brew cask install sketch
-brew cask install liteicon
 
+brew cask install sublime-text-3
 brew cask install phpstorm
+brew cask install intellij-idea
 brew cask install appcode
 brew cask install xamarin-studio
 
-#others
+# office tools
 brew cask install gitbook
-#brew cask microsoft-office
-#brew cask thinkorswim
+brew cask install typed
+brew cask microsoft-office
+brew cask thinkorswim
 
+#others
 #brew cask install appcleaner
-#brew cask install cinch
-#brew cask install sizeup
 #brew cask install cocktail
+#brew cask install cinch
+#brew cask install flux
+#brew cask install liteicon
+#brew cask install sizeup
 #brew cask install totalfinder
 
 #brew cask install bittorrent-sync
