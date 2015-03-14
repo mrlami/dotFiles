@@ -12,7 +12,6 @@ ln -sf ~/_bin/dot-files/gitconfig ~/.gitconfig #git
 ln -sf ~/_bin/dot-files/gitignore ~/.gitignore #gitignore
 
 ln -sf ~/_bin/dot-files/zshrc ~/.zshrc #zsh
-ln -sf ~/_bin/dot-files/vimrc ~/.vimrc #vim
 ln -sf ~/_bin/dot-files/nanorc ~/.nanorc #nano
 
 # source rc files

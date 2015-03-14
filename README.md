@@ -151,31 +151,18 @@ Run individual install commands
 
 **Development**
 
+- sketch
+- dash
 - kaleidoscope
 - codekit
-- sketch
 - sublime-text-3
 - phpstorm
-- intellij-idea
 - appcode
+- intellij-idea
 - xamarin-studio
 
 **Office**
 
 - gitbook
-- typed
 - microsoft-office
 - thinkorswim
-
-**Others** *(un-comment lines from cask.sh to install these)*
-
-- appcleaner
-- cinch
-- sizeup
-- cocktail
-- liteicon
-- totalfinder
-- postbox
-- bittorrent-sync
-- utorrent
-- xquartz inkscape

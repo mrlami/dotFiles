@@ -4,8 +4,6 @@
 brew tap caskroom/versions
 
 brew cask doctor
-brew cask update
-brew cask upgrade
 
 
 # utility apps
@@ -29,6 +27,7 @@ brew cask install screenflow
 brew cask install 4k-video-downloader
 brew cask install handbrake
 brew cask install vlc
+brew cask install spotify
 
 # cloud & web apps
 brew cask install dropbox
@@ -53,6 +52,7 @@ brew cask install tower
 brew cask install transmit
 
 # dev tools
+brew cask install dash
 brew cask install kaleidoscope
 brew cask install codekit
 
@@ -60,15 +60,15 @@ brew cask install sketch
 
 brew cask install sublime-text-3
 brew cask install phpstorm
-brew cask install intellij-idea
 brew cask install appcode
+#brew cask install intellij-idea
 brew cask install xamarin-studio
 
 # office tools
 brew cask install gitbook
-brew cask install typed
 brew cask microsoft-office
 brew cask thinkorswim
+#brew cask install typed
 
 #others
 #brew cask install appcleaner

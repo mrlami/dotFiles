@@ -22,12 +22,12 @@ alias .....="cd ../../../.."
 alias h="cd ~/"
 alias hb="cd ~/_bin"
 alias hs="cd ~/_ssh"
-alias hd="cd ~/Downloads"
+alias d="cd ~/Downloads"
 alias a="cd /apps"
-alias aco="cd /apps/code"
-alias adq="cd /apps/datalogiq"
-alias amx="cd /apps/munetrix"
-alias asg="cd /apps/scigames"
+alias code="cd /apps/code"
+alias dl="cd /apps/datalogiq"
+alias mx="cd /apps/munetrix"
+alias sg="cd /apps/scigames"
 
 # Shortcuts for misc commands
 alias cl="clear"
@@ -35,7 +35,10 @@ alias p="ping -c 5"
 alias serve="python -m SimpleHTTPServer 8000"
 alias aliases="c ~/_bin/dot-common/aliases.sh"
 alias sourcebash="source ~/.bashrc"
+alias sourcezsh="source ~/.zshrc"
 alias sourcebin=". ~/_bin/install.sh"
+alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
@@ -45,7 +48,7 @@ alias c='pygmentize -O style=monokai -f console256 -g'
 
 # Git // install Git first
 alias g='git'
-alias gs='git status'
+alias gs='git status -sb'
 alias gl='git log --graph --decorate --pretty=oneline --abbrev-commit'
 alias ga='git add --all'
 alias gc='git commit -m' # requires you to type a commit message
