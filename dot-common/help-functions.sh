@@ -6,11 +6,6 @@ function enter() {
     cd $1
 }
 
-#remove a directory recursively
-function rmd() {
-    rm -rf $1
-}
-
 #change default shell and change current prompt session to new shell
 function cs() {
     if [ "$1" = "bash" ]
@@ -98,7 +93,7 @@ function install_composer() {
     if type composer >/dev/null; then
         echo "Composer is already installed»"
     else
-        echo "Installing Pygments..."
+        echo "Installing Composer..."
         curl -sS https://getcomposer.org/installer | php
         mv composer.phar /usr/local/bin/composer
     fi
@@ -115,6 +110,7 @@ function update_tmuxifier() {
 }
 
 function install_prezto() {
+    echo '»» installing prezto...'
     uninstall_prezto
     git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
@@ -129,10 +125,8 @@ function install_prezto() {
         fi
     done
 
-    #modules    » history-substring-search, git, node, haskell, osx, syntax-highlighting, wakeonlan
-    #themes     » sorin, steeef, giddie
-
-    #remap & source zshrc dotfile
+    echo '»» mapping zpreztorc & zshrc dotfiles...'
+    ln -sf ~/_bin/dot-files/zpreztorc ~/.zpreztorc
     ln -sf ~/_bin/dot-files/zshrc ~/.zshrc
     source ~/.zshrc
 }

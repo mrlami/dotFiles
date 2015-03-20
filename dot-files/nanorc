@@ -1,3 +1,11 @@
+set autoindent		# auto-indentation
+set tabsize 4		# tab size
+
+set nowrap			# disable line wrapping
+set mouse 			# enable mouse
+set smooth			# smooth scrolling
+
+# syntax highlighting
 include /usr/local/share/nano/asm.nanorc
 include /usr/local/share/nano/awk.nanorc
 include /usr/local/share/nano/c.nanorc

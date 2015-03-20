@@ -27,9 +27,9 @@ Scripts I use to setup my mac terminal (& complete system) when I wipe it clean 
 
 		mv ~/.bash_profile ~/.bash_profile_backup
 		mv ~/.bashrc ~/.bashrc_backup
-		mv ~/.gitconfig ~/.zshrc_backup
-		mv ~/.gitconfig ~/.vimrc_backup
+		mv ~/.zshrc ~/.zshrc_backup
 		mv ~/.gitconfig ~/.gitconfig_backup
+		mv ~/.gitignore ~/.gitignore_backup
 
 2. Clone to your home directory:
 

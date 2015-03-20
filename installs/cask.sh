@@ -23,6 +23,8 @@ brew cask install snagit
 brew cask install camtasia
 brew cask install screenflow
 
+brew cask install launchpad-manager-yosemite
+
 # media apps
 brew cask install 4k-video-downloader
 brew cask install handbrake
