@@ -38,3 +38,5 @@
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 [diff]
 	tool = Kaleidoscope
+[gui]
+	recentrepo = /apps/scigames/scbz-vagrant-box

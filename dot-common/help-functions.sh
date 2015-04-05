@@ -29,6 +29,11 @@ function cs() {
     fi
 }
 
+function setup_dropbox_app_setting_backups() {
+    mv ~/Library/Preferences/com.manytricks.Moom.plist ~/Library/Preferences/com.manytricks.Moom.bak.plist
+    ln -sf ~/Dropbox/Apps/Moom/com.manytricks.Moom.plist ~/Library/Preferences/com.manytricks.Moom.plist
+}
+
 function update_hosts_file() {
     sudo bash -c 'cat ~/_ssh/hosts > /private/etc/hosts'
 }
@@ -42,7 +47,7 @@ function disable_tmux_iterm() {
 }
 
 function init_mac_settings() {
-    source ~/_bin/installz/mac-setup.sh
+    source ~/_bin/installs/mac-setup.sh
 }
 
 function clean_mac_setup() {
@@ -53,8 +58,7 @@ function clean_mac_setup() {
     install_default_brew_apps
     install_default_cask_apps
 
-    # npm, composer, tmuxifier, etc.
-    install_default_npm_apps
+    # composer, tmuxifier, etc.
     install_composer
     install_tmuxifier
     install_hushlogin
@@ -62,6 +66,15 @@ function clean_mac_setup() {
 
     #initialize mac settings
     init_mac_settings
+}
+
+function check_brew_installation() {
+    if type brew > /dev/null; then
+        return 0
+    else
+        echo "Homebrew is not installed.  Run the command 'install_brew_and_cask' to install it"
+        return 1
+    fi
 }
 
 function install_brew_and_cask() {
@@ -72,25 +85,18 @@ function install_brew_and_cask() {
 
 function install_default_brew_apps() {
     if check_brew_installation; then
-        source ~/_bin/installz/brew.sh
+        source ~/_bin/installs/brew.sh
     fi
 }
 
 function install_default_cask_apps() {
     if check_brew_installation; then
-        source ~/_bin/installz/cask.sh
-    fi
-}
-
-function install_default_npm_apps() {
-    if check_npm_installation; then
-        npm install -g bower
-        npm install -g gulp
+        source ~/_bin/installs/cask.sh
     fi
 }
 
 function install_composer() {
-    if type composer >/dev/null; then
+    if type composer > /dev/null; then
         echo "Composer is already installed»"
     else
         echo "Installing Composer..."
@@ -142,11 +148,12 @@ function update_prezto() {
 }
 
 function install_hushlogin() {
+    touch ~/.hushlogin
     echo "# This file prevents the shell login message from appearing" >> ~/.hushlogin
 }
 
 function install_pygments() {
-    if type pygmentize >/dev/null; then
+    if type pygmentize > /dev/null; then
         echo "«Pygments is already installed»"
     else
         echo "Installing Pygments..."
@@ -154,20 +161,7 @@ function install_pygments() {
     fi
 }
 
-function check_brew_installation() {
-    if type brew >/dev/null; then
-        return 0
-    else
-        echo "Homebrew is not installed.  Run the command 'install_brew_and_cask' to install it"
-        return 1
-    fi
-}
-
-function check_npm_installation() {
-    if type npm >/dev/null; then
-        return 0
-    else
-        echo "NPM is not installed.  Run the command 'install_default_brew_apps' to install it"
-        return 1
-    fi
+function install_vagrant_vmware_fusion() {
+    vagrant plugin install vagrant-vmware-fusion
+    vagrant plugin license vagrant-vmware-fusion ~/Dropbox/Apps/_licenses/vagrant-vmware-fusion-license.lic
 }

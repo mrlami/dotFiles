@@ -12,16 +12,16 @@ brew upgrade
 
 # brew installs
 brew install ack
+brew install bash
 brew install gawk
+brew install nano
 brew install tmux
 brew install tree
 brew install wget
-brew install nano
-
-brew install ngrok
+brew install zsh
 
 brew install git
-brew install node
+brew install ngrok
 
 brew install redis
 brew install php56

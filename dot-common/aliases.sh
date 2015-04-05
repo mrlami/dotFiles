@@ -1,7 +1,6 @@
 ## aliases ##
 
-# Open specified files in Sublime Text
-# "s ." will open the current directory in Sublime
+# Open specified files in Sublime Text - 's .'' will open directory
 alias s='open -a "Sublime Text"'
 
 # Color ls
@@ -20,8 +19,8 @@ alias .....="cd ../../../.."
 
 # Shortcuts to folders
 alias h="cd ~/"
-alias hb="cd ~/_bin"
-alias hs="cd ~/_ssh"
+alias hbin="cd ~/_bin"
+alias hssh="cd ~/_ssh"
 alias d="cd ~/Downloads"
 alias a="cd /apps"
 alias code="cd /apps/code"
@@ -38,6 +37,7 @@ alias aliases="c ~/_bin/dot-common/aliases.sh"
 alias sourcebash="source ~/.bashrc"
 alias sourcezsh="source ~/.zshrc"
 alias sourcebin=". ~/_bin/install.sh"
+alias sourcessh=". ~/_ssh/install.sh"
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
@@ -63,15 +63,15 @@ alias gco='gl master..origin/master'	#check what commits have been added to upst
 # Vagrant
 alias v='vagrant'
 alias vu='vagrant up'
+alias vum='vagrant up --provider vmware_fusion'
 alias vs='vagrant ssh'
 alias vd='vagrant destroy -f'
+alias vstart='vd && vu'
+alias vstartm='vd && vum'
 alias vh='vagrant halt'
 alias vsus='vagrant suspend'
 alias vres='vagrant resume'
 alias vsta='vagrant status'
-
-# NPM
-alias n='npm'
 
 # Homebrew & Cask
 alias b='brew'
@@ -82,13 +82,14 @@ alias bcl='brew update && brew upgrade && brew cleanup'
 alias bc='brew cask'
 alias bcs='brew cask search'
 alias bcin='brew cask install'
+alias bcinapp='brew cask install --appdir="/Applications" '
 alias bcun='brew cask uninstall'
 alias bccl='brew cask update && brew cask cleanup'
 
 # Tmux & Tmuxifier
 alias mux='tmuxifier'
 
-# Nodejs & Sailsjs
+# iojs & Sailsjs
 
 
 # PHP & Laravel

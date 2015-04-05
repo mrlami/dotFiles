@@ -12,9 +12,12 @@ Thumbs.db
 .Trashes
 
 # Miscellaneous application config files
-node_modules
-bower_components
 .idea
 .sass-cache
 config.codekit
 vssver2.scc
+
+# Package managers
+vendor
+node_modules
+bower_components

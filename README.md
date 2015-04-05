@@ -51,7 +51,7 @@ Following these steps will make your iTerm look identical to mine in the screens
 1. setup [cmd + left] to skip word left: *iTerm Preferences > Keys > Global Shortcut Keys > change [cmd + left] action to [esc + b]
 2. setup [cmd + right] to skip word righ: *iTerm Preferences > Keys > Global Shortcut Keys > change [cmd + right] action to [esc + f]
 3. Turn off long tab titles: *iTerm Preferences > Appearance > Windows & Tab Titles > uncheck them all*
-4. Prettier font: *iTerm Preferences > Profiles > Default > Text > Regular Font & Non-ASCII > 15pt Monaco*
+4. Prettier font: *iTerm Preferences > Profiles > Default > Text > Regular Font & Non-ASCII > 15pt Menlo*
 5. Unbold font: *iTerm Preferences > Profiles > Default > Text > Text Rendering > uncheck "Draw bold text in bold font"*
 6. Lighter blue for the directory highlighting: *iTerm Preferences > Profiles > Default > Colors > click Blue and make it lighter*
 7. Make default window size bigger: *iTerm Preferences > Profiles > Default > Window > Setting for New Windows > I like Columns: 105, Rows 18*
@@ -68,8 +68,7 @@ Run individual install commands
     install_default_homebrew_apps
     install_default_cask_apps
 
-    # npm, composer, tmuxifier, etc.
-    install_default_npm_apps
+    # composer, tmuxifier, etc.
     install_php_composer
     install_tmuxifier
     install_hushlogin
@@ -96,17 +95,12 @@ Run individual install commands
 - codeception
 - behat
 
-####Default NPM Installs
-- bower
-- gulp
-
 ####Default Cask Installs
 **Utilities**
 
 - bartender
 - caffeine
 - moom
-- coconutbattery
 - wallpaper-wizard
 - xtrafinder
 - alfred
@@ -126,6 +120,7 @@ Run individual install commands
 **Messaging**
 
 - hipchat
+- skype
 - slack
 - screenhero
 
@@ -134,7 +129,6 @@ Run individual install commands
 - dropbox
 - google-drive
 - yandexdisk
-- expandrive
 - google-chrome
 - transmission
 
@@ -155,7 +149,7 @@ Run individual install commands
 - dash
 - kaleidoscope
 - codekit
-- sublime-text-3
+- sublime-text3
 - phpstorm
 - appcode
 - intellij-idea
