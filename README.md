@@ -85,7 +85,6 @@ Run individual install commands
 - wget
 - ngrok
 - git
-- node
 - redis
 - php56
 - php56-pdo-pgsql
@@ -98,7 +97,6 @@ Run individual install commands
 ####Default Cask Installs
 **Utilities**
 
-- bartender
 - caffeine
 - moom
 - wallpaper-wizard
@@ -107,8 +105,8 @@ Run individual install commands
 - iterm2
 - keka
 - namechanger
+- imageoptim
 - snagit
-- camtasia
 - screenflow
 
 **Media**
@@ -116,6 +114,7 @@ Run individual install commands
 - 4k-video-downloader
 - handbrake
 - vlc
+- spotify
 
 **Messaging**
 
@@ -128,9 +127,9 @@ Run individual install commands
 
 - dropbox
 - google-drive
-- yandexdisk
-- google-chrome
+- cloudup
 - transmission
+- google-chrome
 
 **DevOps**
 
@@ -152,7 +151,6 @@ Run individual install commands
 - sublime-text3
 - phpstorm
 - appcode
-- intellij-idea
 - xamarin-studio
 
 **Office**

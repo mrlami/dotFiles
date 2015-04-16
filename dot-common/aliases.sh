@@ -40,6 +40,7 @@ alias sourcebin=". ~/_bin/install.sh"
 alias sourcessh=". ~/_ssh/install.sh"
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+alias renamelower="for f in *; do mv "$f" "`echo $f | tr "[:upper:]" "[:lower:]"`"; done"
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '

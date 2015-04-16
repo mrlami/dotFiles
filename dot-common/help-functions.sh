@@ -29,9 +29,12 @@ function cs() {
     fi
 }
 
-function setup_dropbox_app_setting_backups() {
+function setup_dropbox_app_backups() {
+    # Moom
     mv ~/Library/Preferences/com.manytricks.Moom.plist ~/Library/Preferences/com.manytricks.Moom.bak.plist
     ln -sf ~/Dropbox/Apps/Moom/com.manytricks.Moom.plist ~/Library/Preferences/com.manytricks.Moom.plist
+    mkdir -p ~/Library/Application\ Support/Moom
+    ln -sf ~/Dropbox/Apps/Moom/Blacklist.plist ~/Library/Application\ Support/Moom/Blacklist.plist
 }
 
 function update_hosts_file() {
@@ -53,19 +56,19 @@ function init_mac_settings() {
 function clean_mac_setup() {
     sudo -v # ask for the administrator password upfront.
 
+    #initialize mac settings
+    init_mac_settings
+
     # homebrew & cask
     install_brew_and_cask
     install_default_brew_apps
     install_default_cask_apps
+    install_python_apps
 
     # composer, tmuxifier, etc.
     install_composer
     install_tmuxifier
     install_hushlogin
-    install_pygments
-
-    #initialize mac settings
-    init_mac_settings
 }
 
 function check_brew_installation() {
@@ -95,9 +98,25 @@ function install_default_cask_apps() {
     fi
 }
 
+function install_python_apps() {
+    install_pygments
+
+    echo "Installing pip..."
+    sudo easy_install pip
+
+    echo "Installing pgcli..."
+    sudo pip install pgcli
+}
+
+function install_laravel_apps() {
+    composer global require "laravel/homestead=~2.0" #homestead
+    composer global require "laravel/installer=~1.1" #laravel
+    composer global require "laravel/lumen-installer=~1.0" #lumen
+}
+
 function install_composer() {
-    if type composer > /dev/null; then
-        echo "Composer is already installed»"
+    if (type composer > /dev/null && [ "$1" != "force" ]); then
+        echo "«Composer is already installed»"
     else
         echo "Installing Composer..."
         curl -sS https://getcomposer.org/installer | php

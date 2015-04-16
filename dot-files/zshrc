@@ -6,3 +6,6 @@ fi
 source ~/_bin/dot-common/aliases.sh
 source ~/_bin/dot-common/env-zsh.sh
 source ~/_bin/dot-common/help-functions.sh
+
+# init z - https://github.com/rupa/z
+source ~/_bin/dot-common/z.sh

@@ -21,6 +21,8 @@
 	added = yellow
 	changed = green
 	untracked = cyan
+[push]
+	default = simple
 
 #remove below if Kaleidoscope is not installed
 [mergetool "Kaleidoscope"]
@@ -38,5 +40,3 @@
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 [diff]
 	tool = Kaleidoscope
-[gui]
-	recentrepo = /apps/scigames/scbz-vagrant-box

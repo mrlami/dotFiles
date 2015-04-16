@@ -22,7 +22,7 @@ brew cask install namechanger
 brew cask install imageoptim
 
 brew cask install --appdir="/Applications" snagit
-#brew cask install --appdir="/Applications" camtasia
+brew cask install --appdir="/Applications" camtasia
 brew cask install screenflow
 brew cask install quicklook-json
 
@@ -35,16 +35,17 @@ brew cask install spotify
 # cloud & web apps
 brew cask install dropbox
 brew cask install google-drive
-brew cask install yandexdisk
+brew cask install cloudup
 
 brew cask install google-chrome
 brew cask install transmission
 
 #communication tools
-#brew cask install hipchat
-#brew cask install screenhero
+brew cask install hipchat
+brew cask install screenhero
 brew cask install skype
 brew cask install slack
+brew cask install telegram
 
 # devops tools
 brew cask install iojs
@@ -64,16 +65,18 @@ brew cask install transmit
 brew cask install dash
 brew cask install kaleidoscope
 brew cask install codekit
+brew cask install coderunner
 
 brew cask install sketch
 
 brew cask install sublime-text-3
 brew cask install phpstorm
-#brew cask install appcode
+brew cask install appcode
 #brew cask install intellij-idea
 #brew cask install xamarin-studio
 
 # office tools
+brew cask install dashlane
 brew cask install gitbook
 #brew cask microsoft-office
 #brew cask thinkorswim
