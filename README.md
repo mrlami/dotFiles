@@ -128,6 +128,7 @@ Run individual install commands
 - dropbox
 - google-drive
 - cloudup
+- dashlane
 - transmission
 - google-chrome
 
@@ -155,6 +156,5 @@ Run individual install commands
 
 **Office**
 
+- macdown
 - gitbook
-- microsoft-office
-- thinkorswim

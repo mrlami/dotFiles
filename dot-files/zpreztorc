@@ -14,7 +14,6 @@ zstyle ':prezto:load' pmodule \
   'utility' \
   'completion' \
   'history-substring-search' \
-  'fasd' \
   'git' \
   'node' \
   'osx' \

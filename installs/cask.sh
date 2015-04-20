@@ -7,6 +7,11 @@ brew tap caskroom/fonts
 brew cask doctor
 
 
+#fonts
+brew cask install font-source-code-pro.rb
+brew cask install font-source-code-pro-for-powerline
+brew cask install font-ubuntu-mono-powerline
+
 # utility apps
 brew cask install caffeine
 brew cask install moom
@@ -36,12 +41,14 @@ brew cask install spotify
 brew cask install dropbox
 brew cask install google-drive
 brew cask install cloudup
+brew cask install dashlane
 
 brew cask install google-chrome
 brew cask install transmission
+#brew cask install utorrent
+#brew cask install bittorrent-sync
 
 #communication tools
-brew cask install hipchat
 brew cask install screenhero
 brew cask install skype
 brew cask install slack
@@ -58,8 +65,6 @@ brew cask install navicat-premium-essentials
 brew cask install pgadmin3
 brew cask install tower
 brew cask install transmit
-#brew cask install bittorrent-sync
-#brew cask install utorrent
 
 # dev tools
 brew cask install dash
@@ -71,25 +76,18 @@ brew cask install sketch
 
 brew cask install sublime-text-3
 brew cask install phpstorm
-brew cask install appcode
+#brew cask install appcode
 #brew cask install intellij-idea
 #brew cask install xamarin-studio
 
 # office tools
-brew cask install dashlane
 brew cask install gitbook
-#brew cask microsoft-office
-#brew cask thinkorswim
+brew cask install macdown
 
 #others
 #brew cask install appcleaner
 #brew cask install coconutbattery
 #brew cask install totalfinder
-
-#fonts
-brew cask install font-source-code-pro.rb
-brew cask install font-source-code-pro-for-powerline
-brew cask install font-ubuntu-mono-powerline
 
 
 brew cask cleanup
