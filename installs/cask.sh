@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 # taps
@@ -19,6 +20,7 @@ brew cask install xtrafinder
 brew cask install wallpaper-wizard
 brew cask install launchpad-manager-yosemite
 
+brew cask install atext
 brew cask install alfred
 brew cask install --appdir="/Applications" cleanmymac
 brew cask install iterm2
@@ -26,7 +28,7 @@ brew cask install keka
 brew cask install namechanger
 brew cask install imageoptim
 
-brew cask install --appdir="/Applications" snagit
+#brew cask install --appdir="/Applications" snagit
 brew cask install --appdir="/Applications" camtasia
 brew cask install screenflow
 brew cask install quicklook-json
@@ -41,7 +43,6 @@ brew cask install spotify
 brew cask install dropbox
 brew cask install google-drive
 brew cask install cloudup
-brew cask install dashlane
 
 brew cask install google-chrome
 brew cask install transmission
@@ -49,10 +50,10 @@ brew cask install transmission
 #brew cask install bittorrent-sync
 
 #communication tools
+brew cask install hipchat
 brew cask install screenhero
 brew cask install skype
 brew cask install slack
-brew cask install telegram
 
 # devops tools
 brew cask install iojs
@@ -71,6 +72,7 @@ brew cask install dash
 brew cask install kaleidoscope
 brew cask install codekit
 brew cask install coderunner
+brew cask install rbtools
 
 brew cask install sketch
 
@@ -87,6 +89,7 @@ brew cask install macdown
 #others
 #brew cask install appcleaner
 #brew cask install coconutbattery
+#brew cask install dashlane
 #brew cask install totalfinder
 
 
