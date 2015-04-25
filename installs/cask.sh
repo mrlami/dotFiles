@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 # taps
@@ -14,16 +13,18 @@ brew cask install font-source-code-pro-for-powerline
 brew cask install font-ubuntu-mono-powerline
 
 # utility apps
+brew cask install bartender
 brew cask install caffeine
-brew cask install moom
-brew cask install xtrafinder
-brew cask install wallpaper-wizard
 brew cask install launchpad-manager-yosemite
+brew cask install moom
+brew cask install time-out
+brew cask install wallpaper-wizard
 
 brew cask install atext
 brew cask install alfred
-brew cask install --appdir="/Applications" cleanmymac
 brew cask install iterm2
+brew cask install xtrafinder
+brew cask install --appdir="/Applications" cleanmymac
 brew cask install keka
 brew cask install namechanger
 brew cask install imageoptim

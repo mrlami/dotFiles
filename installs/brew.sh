@@ -23,7 +23,9 @@ brew install zsh
 brew install git
 brew install ngrok
 
+brew install sqlite
 brew install redis
+
 brew install php56
 brew install php56-pdo-pgsql
 brew install php56-mcrypt
