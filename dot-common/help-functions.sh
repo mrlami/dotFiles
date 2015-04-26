@@ -31,6 +31,8 @@ function cs() {
 
 function setup_dropbox_app_backups() {
     # Moom
+    open -a "Moom"
+    osascript -e 'quit app "Moom"'
     mv ~/Library/Preferences/com.manytricks.Moom.plist ~/Library/Preferences/com.manytricks.Moom.bak.plist
     ln -sf ~/Dropbox/Apps/Moom/com.manytricks.Moom.plist ~/Library/Preferences/com.manytricks.Moom.plist
     mkdir -p ~/Library/Application\ Support/Moom
@@ -56,9 +58,6 @@ function init_mac_settings() {
 function clean_mac_setup() {
     sudo -v # ask for the administrator password upfront.
 
-    #initialize mac settings
-    init_mac_settings
-
     # homebrew & cask
     install_brew_and_cask
     install_default_brew_apps
@@ -69,6 +68,10 @@ function clean_mac_setup() {
     install_composer
     install_tmuxifier
     install_hushlogin
+
+    #others
+    install_vagrant_vmware_fusion
+    setup_dropbox_app_backups
 }
 
 function check_brew_installation() {

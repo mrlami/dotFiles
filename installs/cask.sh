@@ -63,7 +63,7 @@ brew cask install virtualbox
 brew cask install vagrant
 
 brew cask install cornerstone
-brew cask install navicat-premium-essentials
+brew cask install navicat-premium
 brew cask install pgadmin3
 brew cask install tower
 brew cask install transmit

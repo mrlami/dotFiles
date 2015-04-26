@@ -10,8 +10,7 @@ Scripts I use to setup my mac terminal (& complete system) when I wipe it clean 
     - Faster directory navigation with z.sh
     - Customized bash prompt line (with Git branch status, and customizable symbol ⚡)
 - Customized ***zsh*** with [prezto](https://github.com/sorin-ionescu/prezto)
-- ```init_mac_settings()``` function to set misc mac settings - e.g. timezone
-- ```clean_mac_setup()``` function ***(NOTE: xcode & xcode command-line needed)***
+- ```clean_mac_setup()``` function ***(NOTE: xcode command-line tools needed)***
 	- Installs Homebrew and Cask
 	- Installs misc hombrew apps (ack, tmux, git, node, php 5.6, etc.)
 	- Installs misc cask apps (chrome, sublime text, vagrant, virtualbox, etc.)
@@ -19,7 +18,6 @@ Scripts I use to setup my mac terminal (& complete system) when I wipe it clean 
 	- Installs PHP composer
 	- Installs Tmuxifier
 	- Installs hushlogin
-	- Calls *init_mac_settings()*
 
 ### Installation: dotfiles
 
@@ -71,11 +69,13 @@ Run individual install commands
     # composer, tmuxifier, etc.
     install_php_composer
     install_tmuxifier
+    install_prezto
     install_hushlogin
     install_pygments
 
-    #initialize mac settings
-    init_mac_settings
+    #personal
+    install_vagrant_vmware_fusion
+    setup_dropbox_app_backups
 
 ####Default Homebrew Installs
 - ack
