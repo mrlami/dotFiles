@@ -45,10 +45,12 @@ brew cask install dropbox
 brew cask install google-drive
 brew cask install cloudup
 
-brew cask install google-chrome
 brew cask install transmission
 #brew cask install utorrent
 #brew cask install bittorrent-sync
+
+brew cask install google-chrome
+brew cask install firefoxdeveloperedition
 
 #communication tools
 brew cask install hipchat
@@ -84,8 +86,8 @@ brew cask install java6 phpstorm
 #brew cask install xamarin-studio
 
 # office tools
-brew cask install gitbook
 brew cask install macdown
+#brew cask install gitbook
 
 #others
 #brew cask install appcleaner

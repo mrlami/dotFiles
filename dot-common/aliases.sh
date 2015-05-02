@@ -41,6 +41,7 @@ alias sourcessh=". ~/_ssh/install.sh"
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 alias renamelower="for f in *; do mv "$f" "`echo $f | tr "[:upper:]" "[:lower:]"`"; done"
+alias renameupper="for f in *; do mv "$f" "`echo $f | tr "[:lower:]" "[:upper:]"`"; done"
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
@@ -48,32 +49,30 @@ alias sudo='sudo '
 # Colored cat! // install Pygments first - "sudo easy_install Pygments"
 alias c='pygmentize -O style=monokai -f console256 -g'
 
-# Git // install Git first
+# Git
 alias g='git'
 alias gs='git status -sb'
 alias gl='git log --graph --decorate --oneline --abbrev-commit'
 alias ga='git add --all'
 alias gc='git commit -m'
-alias gcu='git commit --amend -m'
+alias gcamend='git commit --amend -m'
 alias gp='git push'
-alias gpo='git push origin master'
 alias gpl='git pull'
-alias gplo='git pull origin master'
-alias gclone='git clone'
+alias gcl='git clone'
 alias gco='gl master..origin/master'	#check what commits have been added to upstream
+
+# Review Board Tools (rbtools)
 
 # Vagrant
 alias v='vagrant'
-alias vu='vagrant up'
-alias vum='vagrant up --provider vmware_fusion'
-alias vs='vagrant ssh'
+alias vs='vagrant status'
+alias vu='vagrant up --provider vmware_fusion'
+alias vssh='vagrant ssh'
 alias vd='vagrant destroy -f'
-alias vstart='vd && vu'
-alias vstartm='vd && vum'
+alias vfresh='vd && vu'
 alias vh='vagrant halt'
 alias vsus='vagrant suspend'
 alias vres='vagrant resume'
-alias vsta='vagrant status'
 
 # Homebrew & Cask
 alias b='brew'
