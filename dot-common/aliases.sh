@@ -1,8 +1,5 @@
 ## aliases ##
 
-# Open specified files in Sublime Text - 's .'' will open directory
-alias s='open -a "Sublime Text"'
-
 # Color ls
 colorflag="-G"
 alias ls="command ls ${colorflag}"
@@ -29,6 +26,7 @@ alias mx="cd /apps/munetrix"
 alias sg="cd /apps/scigames"
 
 # Shortcuts for misc commands
+alias s='open -a "Sublime Text"'
 alias cl="clear"
 alias p="ping -c 5"
 alias rmd="rm -rf"
@@ -52,7 +50,7 @@ alias c='pygmentize -O style=monokai -f console256 -g'
 # Git
 alias g='git'
 alias gs='git status -sb'
-alias gl='git log --graph --decorate --oneline --abbrev-commit'
+alias gl='git log --online --decorate --graph'
 alias ga='git add --all'
 alias gc='git commit -m'
 alias gcamend='git commit --amend -m'

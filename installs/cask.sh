@@ -80,7 +80,11 @@ brew cask install rbtools
 brew cask install sketch
 
 brew cask install sublime-text3
-brew cask install java6 phpstorm
+brew cask install atom
+
+brew cask install java6
+brew cask install webstorm
+brew cask install phpstorm
 #brew cask install appcode
 #brew cask install intellij-idea
 #brew cask install xamarin-studio

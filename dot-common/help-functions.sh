@@ -37,6 +37,13 @@ function setup_dropbox_app_backups() {
     ln -sf ~/Dropbox/Apps/Moom/com.manytricks.Moom.plist ~/Library/Preferences/com.manytricks.Moom.plist
     mkdir -p ~/Library/Application\ Support/Moom
     ln -sf ~/Dropbox/Apps/Moom/Blacklist.plist ~/Library/Application\ Support/Moom/Blacklist.plist
+
+    # Bartender
+    open -a "Bartender"
+    osascript -e 'quit app "Moom"'
+    mv ~/Library/Preferences/com.surteesstudios.Bartender.plist ~/Library/Preferences/com.surteesstudios.Bartender.bak.plist
+    ln -sf ~/Dropbox/Apps/Bartender/com.surteesstudios.Bartender.plist ~/Library/Preferences/com.surteesstudios.Bartender.plist
+    defaults read com.surteesstudios.Bartender
 }
 
 function update_hosts_file() {
