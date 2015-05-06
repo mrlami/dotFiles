@@ -1,21 +1,17 @@
 ## functions ##
 
-# create a directory and cd into it
 function enter() {
     mkdir $1
     cd $1
 }
 
-#change default shell and change current prompt session to new shell
 function cs() {
-    if [ "$1" = "bash" ]
-    then
+    if [ "$1" = "bash" ]; then
         echo ' »» swithing shell to bash'
         chsh -s `which bash`
         bash
         source ~/.bashrc
-    elif [ "$1" = "zsh" ]
-    then
+    elif [ "$1" = "zsh" ]; then
         echo ' »» swithing shell to zsh'
         chsh -s `which zsh`
         zsh
@@ -29,6 +25,21 @@ function cs() {
     fi
 }
 
+function mac() {
+    local MACNAME
+
+    if [ -z "$1" ]; then
+        MACNAME="retina-mrlami"
+    else
+        MACNAME=$1
+    fi
+
+    sudo scutil --set ComputerName "$MACNAME"
+    sudo scutil --set LocalHostName "$MACNAME"
+    sudo scutil --set HostName "$MACNAME"
+    sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$MACNAME"
+}
+
 function setup_dropbox_app_backups() {
     # Moom
     open -a "Moom"
@@ -40,10 +51,26 @@ function setup_dropbox_app_backups() {
 
     # Bartender
     open -a "Bartender"
-    osascript -e 'quit app "Moom"'
+    osascript -e 'quit app "Bartender"'
     mv ~/Library/Preferences/com.surteesstudios.Bartender.plist ~/Library/Preferences/com.surteesstudios.Bartender.bak.plist
     ln -sf ~/Dropbox/Apps/Bartender/com.surteesstudios.Bartender.plist ~/Library/Preferences/com.surteesstudios.Bartender.plist
     defaults read com.surteesstudios.Bartender
+}
+
+function bar() {
+    osascript -e 'quit app "Bartender"'
+
+    if [ -z "$1" ] || [ "$1" = "default" ]; then
+        ln -sf ~/Dropbox/Apps/Bartender/com.surteesstudios.Bartender.plist ~/Library/Preferences/com.surteesstudios.Bartender.plist
+        defaults read com.surteesstudios.Bartender
+        echo "✓ loaded default bartendar settings"
+    elif [ "$1" = "screencast" ]; then
+        ln -sf ~/Dropbox/Apps/Bartender/com.surteesstudios.Bartender.screencast.plist ~/Library/Preferences/com.surteesstudios.Bartender.plist
+        defaults read com.surteesstudios.Bartender
+        echo "✓ loaded screencast bartendar settings"
+    fi
+
+    open -a "Bartender"
 }
 
 function update_hosts_file() {
@@ -193,4 +220,17 @@ function install_pygments() {
 function install_vagrant_vmware_fusion() {
     vagrant plugin install vagrant-vmware-fusion
     vagrant plugin license vagrant-vmware-fusion ~/Dropbox/Apps/_licenses/vagrant-vmware-fusion-license.lic
+}
+
+function sgclone() {
+    git clone ssh://l_adabonyan@172.30.204.246:29418/SCBZ/$1.git
+    cd $1
+}
+
+function sgreview() {
+    if [ -z "$1" ]; then
+        rbt post --username mrlami -o
+    else
+        rbt post -r $1 -o
+    fi
 }

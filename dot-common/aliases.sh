@@ -50,7 +50,7 @@ alias c='pygmentize -O style=monokai -f console256 -g'
 # Git
 alias g='git'
 alias gs='git status -sb'
-alias gl='git log --online --decorate --graph'
+alias gl='git log --oneline --decorate --graph'
 alias ga='git add --all'
 alias gc='git commit -m'
 alias gcamend='git commit --amend -m'
