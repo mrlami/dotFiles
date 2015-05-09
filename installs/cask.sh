@@ -11,6 +11,7 @@ brew cask doctor
 brew cask install font-source-code-pro.rb
 brew cask install font-source-code-pro-for-powerline
 brew cask install font-ubuntu-mono-powerline
+brew cask install font-nexa
 
 # utility apps
 brew cask install bartender
@@ -91,7 +92,7 @@ brew cask install phpstorm
 
 # office tools
 brew cask install macdown
-#brew cask install gitbook
+brew cask install gitbook
 
 #others
 #brew cask install appcleaner

@@ -25,19 +25,8 @@ function cs() {
     fi
 }
 
-function mac() {
-    local MACNAME
-
-    if [ -z "$1" ]; then
-        MACNAME="retina-mrlami"
-    else
-        MACNAME=$1
-    fi
-
-    sudo scutil --set ComputerName "$MACNAME"
-    sudo scutil --set LocalHostName "$MACNAME"
-    sudo scutil --set HostName "$MACNAME"
-    sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$MACNAME"
+function update_hosts_file() {
+    sudo bash -c 'cat ~/_ssh/hosts > /private/etc/hosts'
 }
 
 function setup_dropbox_app_backups() {
@@ -57,6 +46,21 @@ function setup_dropbox_app_backups() {
     defaults read com.surteesstudios.Bartender
 }
 
+function mac() {
+    local MACNAME
+
+    if [ -z "$1" ]; then
+        MACNAME="retina-mrlami"
+    else
+        MACNAME=$1
+    fi
+
+    sudo scutil --set ComputerName "$MACNAME"
+    sudo scutil --set LocalHostName "$MACNAME"
+    sudo scutil --set HostName "$MACNAME"
+    sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$MACNAME"
+}
+
 function bar() {
     osascript -e 'quit app "Bartender"'
 
@@ -71,10 +75,6 @@ function bar() {
     fi
 
     open -a "Bartender"
-}
-
-function update_hosts_file() {
-    sudo bash -c 'cat ~/_ssh/hosts > /private/etc/hosts'
 }
 
 function enable_tmux_iterm() {
@@ -96,14 +96,19 @@ function clean_mac_setup() {
     install_brew_and_cask
     install_default_brew_apps
     install_default_cask_apps
-    install_python_apps
 
     # composer, tmuxifier, etc.
     install_composer
     install_tmuxifier
     install_hushlogin
+    install_prezto
 
-    #others
+    # dev language apps
+    install_npm_apps
+    install_python_apps
+    install_laravel_apps
+
+    # others
     install_vagrant_vmware_fusion
     setup_dropbox_app_backups
 }
@@ -133,6 +138,11 @@ function install_default_cask_apps() {
     if check_brew_installation; then
         source ~/_bin/installs/cask.sh
     fi
+}
+
+function install_npm_apps() {
+    sudo npm install -g yo bower grunt-cli gulp
+    sudo npm install --global trash
 }
 
 function install_python_apps() {
@@ -222,11 +232,18 @@ function install_vagrant_vmware_fusion() {
     vagrant plugin license vagrant-vmware-fusion ~/Dropbox/Apps/_licenses/vagrant-vmware-fusion-license.lic
 }
 
+#clone a repository and cd into it
 function sgclone() {
-    git clone ssh://l_adabonyan@172.30.204.246:29418/SCBZ/$1.git
-    cd $1
+    git clone ssh://l_adabonyan@172.30.204.246:29418/SCBZ/$1.git $2
+
+    if [ $# -lt 2 ]; then
+        cd $1
+    else
+        cd $2
+    fi
 }
 
+#request a review
 function sgreview() {
     if [ -z "$1" ]; then
         rbt post --username mrlami -o
