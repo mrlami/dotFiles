@@ -14,10 +14,7 @@ Scripts I use to setup my mac terminal (& complete system) when I wipe it clean 
 	- Installs Homebrew and Cask
 	- Installs misc hombrew apps (ack, tmux, git, node, php 5.6, etc.)
 	- Installs misc cask apps (chrome, sublime text, vagrant, virtualbox, etc.)
-	- Installs misc node apps (bower, gulp)
-	- Installs PHP composer
-	- Installs Tmuxifier
-	- Installs hushlogin
+	- Installs other tools like (iojs, gulp, composer, tmuxifier, etc.)
 
 ### Installation: dotfiles
 
@@ -78,83 +75,7 @@ Run individual install commands
     setup_dropbox_app_backups
 
 ####Default Homebrew Installs
-- ack
-- gawk
-- tmux
-- tree
-- wget
-- ngrok
-- git
-- redis
-- php56
-- php56-pdo-pgsql
-- php56-mcrypt
-- boris
-- phpunit
-- codeception
-- behat
+- [brew.sh](https://github.com/mrlami/dotFiles/blob/master/installs/brew.sh)
 
 ####Default Cask Installs
-**Utilities**
-
-- caffeine
-- moom
-- wallpaper-wizard
-- xtrafinder
-- alfred
-- iterm2
-- keka
-- namechanger
-- imageoptim
-- snagit
-- screenflow
-
-**Media**
-
-- 4k-video-downloader
-- handbrake
-- vlc
-- spotify
-
-**Messaging**
-
-- hipchat
-- skype
-- slack
-- screenhero
-
-**Cloud/Internet**
-
-- dropbox
-- google-drive
-- cloudup
-- dashlane
-- transmission
-- google-chrome
-
-**DevOps**
-
-- vmware-fusion
-- virtualbox
-- vagrant
-- cornerstone
-- navicat-premium
-- pgadmin3
-- tower
-- transmit
-
-**Development**
-
-- sketch
-- dash
-- kaleidoscope
-- codekit
-- sublime-text3
-- phpstorm
-- appcode
-- xamarin-studio
-
-**Office**
-
-- macdown
-- gitbook
+- [cask.sh](https://github.com/mrlami/dotFiles/blob/master/installs/cask.sh)

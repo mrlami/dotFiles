@@ -26,5 +26,5 @@ zstyle ':prezto:module:editor' key-bindings 'emacs'
 
 # Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.
-zstyle ':prezto:module:prompt' theme 'steeef'  # steeef / agnoster / paradox
+zstyle ':prezto:module:prompt' theme 'steeef'  # steeef / paradox
 

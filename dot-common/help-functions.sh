@@ -68,6 +68,10 @@ function bar() {
         ln -sf ~/Dropbox/Apps/Bartender/com.surteesstudios.Bartender.plist ~/Library/Preferences/com.surteesstudios.Bartender.plist
         defaults read com.surteesstudios.Bartender
         echo "✓ loaded default bartendar settings"
+    elif [ "$1" = "time" ]; then
+        ln -sf ~/Dropbox/Apps/Bartender/com.surteesstudios.Bartender.time.plist ~/Library/Preferences/com.surteesstudios.Bartender.plist
+        defaults read com.surteesstudios.Bartender
+        echo "✓ loaded time bartendar settings"
     elif [ "$1" = "screencast" ]; then
         ln -sf ~/Dropbox/Apps/Bartender/com.surteesstudios.Bartender.screencast.plist ~/Library/Preferences/com.surteesstudios.Bartender.plist
         defaults read com.surteesstudios.Bartender
