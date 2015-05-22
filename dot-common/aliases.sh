@@ -2,11 +2,12 @@
 
 # Color ls
 colorflag="-G"
-alias ls="command ls ${colorflag}"
-alias l="ls -lF ${colorflag}" # all files, in long format
+alias ls="ls ${colorflag}"
 alias la="ls -A ${colorflag}" # all files inc dotfiles
+alias l="ls -lF ${colorflag}" # all files, in long format
 alias ll="ls -laF ${colorflag}" # all files inc dotfiles, in long format
-alias lsd='ls -lF ${colorflag} | grep "^d"' # only directories
+alias lsd='ls -lF | grep "^d"' # only directories
+alias llsd='ls -laF | grep "^d"' # only directories inc dotfiles
 
 # Quicker navigation
 alias ..="cd .."
@@ -30,7 +31,7 @@ alias s='open -a "Sublime Text"'
 alias cl="clear"
 alias p="ping -c 5"
 alias rmd="rm -rf"
-alias serve="python -m SimpleHTTPServer 8000"
+alias serve="php -S localhost:8000"     # use -t to specify different doc root
 alias aliases="c ~/_bin/dot-common/aliases.sh"
 alias sourcebash="source ~/.bashrc"
 alias sourcezsh="source ~/.zshrc"
@@ -51,6 +52,7 @@ alias c='pygmentize -O style=monokai -f console256 -g'
 alias g='git'
 alias gs='git status -sb'
 alias gl='git log --oneline --decorate --graph'
+alias gl2='git shortlog -s -n -e' #-s squash commit msgs into the # of commits, -n sorts the list by # of commits, -e append emails
 alias ga='git add --all'
 alias gc='git commit -m'
 alias gcamend='git commit --amend -m'
@@ -76,7 +78,7 @@ alias b='brew'
 alias bs='brew search'
 alias bin='brew install'
 alias bun='brew uninstall'
-alias bcl='brew update && brew upgrade && brew cleanup'
+alias bcl='brew update && brew upgrade --all && brew cleanup'
 alias bc='brew cask'
 alias bcs='brew cask search'
 alias bcin='brew cask install'
@@ -87,7 +89,7 @@ alias bccl='brew cask update && brew cask cleanup'
 alias mux='tmuxifier'
 
 # iojs & Sailsjs
-
+alias nlist='npm list -g --depth=0'
 
 # PHP & Laravel
 

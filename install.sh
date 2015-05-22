@@ -10,6 +10,7 @@ ln -sf ~/_bin/dot-files/bash_profile ~/.bash_profile #bash
 
 ln -sf ~/_bin/dot-files/gitconfig ~/.gitconfig #git
 ln -sf ~/_bin/dot-files/gitignore ~/.gitignore #gitignore
+ln -sf ~/_bin/dot-files/.git_template ~/.git_template #template dir (for git hooks)
 
 ln -sf ~/_bin/dot-files/zshrc ~/.zshrc #zsh
 ln -sf ~/_bin/dot-files/nanorc ~/.nanorc #nano

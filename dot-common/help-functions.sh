@@ -67,15 +67,15 @@ function bar() {
     if [ -z "$1" ] || [ "$1" = "default" ]; then
         ln -sf ~/Dropbox/Apps/Bartender/com.surteesstudios.Bartender.plist ~/Library/Preferences/com.surteesstudios.Bartender.plist
         defaults read com.surteesstudios.Bartender
-        echo "✓ loaded default bartendar settings"
-    elif [ "$1" = "time" ]; then
-        ln -sf ~/Dropbox/Apps/Bartender/com.surteesstudios.Bartender.time.plist ~/Library/Preferences/com.surteesstudios.Bartender.plist
+        echo "✓ loaded **default** bartendar settings"
+    elif [ "$1" = "clear" ] || [ "$1" = "screencast" ]; then
+        ln -sf ~/Dropbox/Apps/Bartender/com.surteesstudios.Bartender.clear.plist ~/Library/Preferences/com.surteesstudios.Bartender.plist
         defaults read com.surteesstudios.Bartender
-        echo "✓ loaded time bartendar settings"
-    elif [ "$1" = "screencast" ]; then
-        ln -sf ~/Dropbox/Apps/Bartender/com.surteesstudios.Bartender.screencast.plist ~/Library/Preferences/com.surteesstudios.Bartender.plist
+        echo "✓ loaded **clear / screencast** bartendar settings"
+    elif [ "$1" = "all" ]; then
+        ln -sf ~/Dropbox/Apps/Bartender/com.surteesstudios.Bartender.all.plist ~/Library/Preferences/com.surteesstudios.Bartender.plist
         defaults read com.surteesstudios.Bartender
-        echo "✓ loaded screencast bartendar settings"
+        echo "✓ loaded **all** bartendar settings"
     fi
 
     open -a "Bartender"
