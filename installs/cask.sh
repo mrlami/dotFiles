@@ -95,10 +95,8 @@ brew cask install macdown
 brew cask install gitbook
 
 #others
-#brew cask install appcleaner
-#brew cask install coconutbattery
-#brew cask install dashlane
-#brew cask install totalfinder
+#brew cask install appcleaner coconutbattery totalfinder
+#brew cask install dashpass lastpass
 
 
 brew cask cleanup
