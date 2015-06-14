@@ -1,5 +1,5 @@
 window_root "~/Downloads"
-new_window "SGI Start Window"
+new_window "sgi-window"
 
 run_cmd "ssh lami@scbz-uat-web1"
 

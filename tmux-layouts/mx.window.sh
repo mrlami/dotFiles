@@ -1,5 +1,5 @@
 window_root "~/Downloads"
-new_window "MX Start Window"
+new_window "mx-window"
 
 run_cmd "ssh mrlami@mx-dev"
 
