@@ -21,13 +21,12 @@ brew cask install font-roboto-slab.rb
 # utility apps
 brew cask install bartender
 brew cask install caffeine
-brew cask install launchpad-manager-yosemite
-brew cask install moom
-brew cask install wallpaper-wizard
+brew cask install itsycal
 
 brew cask install atext
 brew cask install alfred
 brew cask install lastpass
+brew cask install moom
 
 brew cask install iterm2
 brew cask install xtrafinder
@@ -36,6 +35,9 @@ brew cask install --appdir="/Applications" cleanmymac
 brew cask install keka
 brew cask install namechanger
 brew cask install imageoptim
+
+brew cask install launchpad-manager-yosemite
+brew cask install wallpaper-wizard
 
 #brew cask install --appdir="/Applications" snagit
 #brew cask install --appdir="/Applications" camtasia
@@ -70,16 +72,16 @@ brew cask install virtualbox
 brew cask install vagrant
 
 brew cask install cornerstone
-brew cask install navicat-premium
-brew cask install pgadmin3
+brew cask install gitup
 brew cask install tower
+
+brew cask install navicat-premium
 brew cask install transmit
 
 # dev tools
 brew cask install dash
 brew cask install kaleidoscope
 brew cask install codekit
-brew cask install coderunner
 brew cask install rbtools
 
 brew cask install sketch
@@ -101,7 +103,9 @@ brew cask install gitbook
 #brew cask install utorrent
 #brew cask install bittorrent-sync
 
-#brew cask install gitup
+#brew cask install pgadmin3
+
+#brew cask install coderunner
 #brew cask install webstorm
 #brew cask install intellij-idea
 #brew cask install xamarin-studio

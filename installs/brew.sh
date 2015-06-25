@@ -23,17 +23,19 @@ brew install zsh
 brew install git
 brew install ngrok
 
-brew install sqlite
 brew install redis
+brew install postgresql
+brew install pgcli
 
 brew install php56
-brew install php56-pdo-pgsql
 brew install php56-mcrypt
+brew install php56-pdo-pgsql
 
 brew install boris
-brew install phpunit
 brew install codeception
-brew install behat
 
+#misc setup
+ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
+launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
 
 brew cleanup

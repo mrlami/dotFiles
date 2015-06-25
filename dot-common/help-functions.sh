@@ -5,26 +5,6 @@ function enter() {
     cd $1
 }
 
-function cs() {
-    if [ "$1" = "bash" ]; then
-        echo ' »» swithing shell to bash'
-        chsh -s `which bash`
-        bash
-        source ~/.bashrc
-    elif [ "$1" = "zsh" ]; then
-        echo ' »» swithing shell to zsh'
-        chsh -s `which zsh`
-        zsh
-        source ~/.zshrc
-    else
-        echo '...........'
-        echo ' you have to pass either "bash" or "zsh" to switch shell (cs) command as parameters'
-        echo ' »» cs bash'
-        echo ' »» cs zsh'
-        echo '...........'
-    fi
-}
-
 function update_hosts_file() {
     sudo bash -c 'cat ~/_ssh/hosts > /private/etc/hosts'
 }
@@ -158,9 +138,6 @@ function install_python_apps() {
 
     echo "Installing pip..."
     sudo easy_install pip
-
-    echo "Installing pgcli..."
-    sudo pip install pgcli
 }
 
 function install_laravel_apps() {

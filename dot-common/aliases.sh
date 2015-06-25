@@ -100,7 +100,6 @@ alias nlist='npm list -g --depth=0'
 export PATH="/usr/local/sbin:$PATH" 	# homebrew
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
-export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 export TMUXIFIER_LAYOUT_PATH="$HOME/_bin/tmux-layouts"
 eval "$(tmuxifier init -)"
