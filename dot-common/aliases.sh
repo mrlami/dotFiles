@@ -53,14 +53,15 @@ alias c='pygmentize -O style=monokai -f console256 -g'
 alias g='git'
 alias gs='git status -sb'
 alias gl='git log --oneline --decorate --graph'
-alias gl2='git shortlog -s -n -e' #-s squash commit msgs into the # of commits, -n sorts the list by # of commits, -e append emails
+alias gl2='git shortlog -s -n -e'       #-s squash commit msgs into the # of commits, -n sorts the list by # of commits, -e append emails
 alias ga='git add --all'
 alias gc='git commit -m'
 alias gcamend='git commit --amend -m'
 alias gp='git push'
 alias gpl='git pull'
 alias gcl='git clone'
-alias gco='gl master..origin/master'	#check what commits have been added to upstream
+alias gco='git checkout'
+alias gcomp='gl master..origin/master'	#check what commits have been added to upstream
 
 # Review Board Tools (rbtools)
 

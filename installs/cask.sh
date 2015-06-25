@@ -12,26 +12,35 @@ brew cask install font-source-code-pro.rb
 brew cask install font-source-code-pro-for-powerline
 brew cask install font-ubuntu-mono-powerline
 brew cask install font-nexa
+brew cask install font-open-sans.rb
+brew cask install font-open-sans-condensed.rb
+brew cask install font-roboto.rb
+brew cask install font-roboto-mono.rb
+brew cask install font-roboto-slab.rb
 
 # utility apps
 brew cask install bartender
 brew cask install caffeine
 brew cask install launchpad-manager-yosemite
 brew cask install moom
-brew cask install time-out
 brew cask install wallpaper-wizard
 
 brew cask install atext
 brew cask install alfred
+brew cask install lastpass
+
 brew cask install iterm2
 brew cask install xtrafinder
 brew cask install --appdir="/Applications" cleanmymac
+
 brew cask install keka
 brew cask install namechanger
 brew cask install imageoptim
 
 #brew cask install --appdir="/Applications" snagit
-brew cask install --appdir="/Applications" camtasia
+#brew cask install --appdir="/Applications" camtasia
+brew cask install cloudup
+brew cask install droplr
 brew cask install screenflow
 brew cask install quicklook-json
 
@@ -44,17 +53,12 @@ brew cask install spotify
 # cloud & web apps
 brew cask install dropbox
 brew cask install google-drive
-brew cask install cloudup
-
 brew cask install transmission
-#brew cask install utorrent
-#brew cask install bittorrent-sync
 
 brew cask install google-chrome
 brew cask install firefoxdeveloperedition
 
 #communication tools
-brew cask install hipchat
 brew cask install screenhero
 brew cask install skype
 brew cask install slack
@@ -79,24 +83,28 @@ brew cask install coderunner
 brew cask install rbtools
 
 brew cask install sketch
-
 brew cask install sublime-text3
-brew cask install atom
 
 brew cask install java6
-brew cask install webstorm
 brew cask install phpstorm
-#brew cask install appcode
-#brew cask install intellij-idea
-#brew cask install xamarin-studio
+brew cask install appcode
 
 # office tools
 brew cask install macdown
 brew cask install gitbook
 
 #others
-#brew cask install appcleaner coconutbattery totalfinder
-#brew cask install dashpass lastpass
+#brew cask install appcleaner
+#brew cask install totalfinder
+
+#brew cask install joinme
+#brew cask install utorrent
+#brew cask install bittorrent-sync
+
+#brew cask install gitup
+#brew cask install webstorm
+#brew cask install intellij-idea
+#brew cask install xamarin-studio
 
 
 brew cask cleanup
