@@ -59,6 +59,7 @@ brew cask install transmission
 
 brew cask install google-chrome
 brew cask install firefoxdeveloperedition
+brew cask install helium
 
 #communication tools
 brew cask install screenhero
@@ -79,17 +80,15 @@ brew cask install navicat-premium
 brew cask install transmit
 
 # dev tools
+brew cask install codekit
+brew cask install coderunner
 brew cask install dash
 brew cask install kaleidoscope
-brew cask install codekit
 brew cask install rbtools
 
 brew cask install sketch
 brew cask install sublime-text3
-
-brew cask install java6
-brew cask install phpstorm
-brew cask install appcode
+brew cask install java6 phpstorm
 
 # office tools
 brew cask install macdown
@@ -105,7 +104,7 @@ brew cask install gitbook
 
 #brew cask install pgadmin3
 
-#brew cask install coderunner
+#brew cask install appcode
 #brew cask install webstorm
 #brew cask install intellij-idea
 #brew cask install xamarin-studio

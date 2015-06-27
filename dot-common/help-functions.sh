@@ -79,6 +79,7 @@ function init_mac_settings() {
 
 function clean_mac_setup() {
     sudo -v # ask for the administrator password upfront.
+    xcode-select --install #install Xcode
 
     # homebrew & cask
     install_brew_and_cask
@@ -99,6 +100,9 @@ function clean_mac_setup() {
     # others
     install_vagrant_vmware_fusion
     setup_dropbox_app_backups
+
+    # setup mac defaults
+    init_mac_settings
 }
 
 function check_brew_installation() {
