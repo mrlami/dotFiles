@@ -1,9 +1,9 @@
 [user]
-	name = mrLami
+	name = mrlami
 	email = lami@inbox.com
 [core]
 	# Use custom `.gitignore`
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/mrlami/.gitignore
 	# Treat spaces before tabs, lines that are indented with 8 or more spaces, and all kinds of trailing whitespace as an error
 	whitespace = space-before-tab,indent-with-non-tab,trailing-space
 [color]
@@ -42,3 +42,13 @@
 	tool = Kaleidoscope
 [init]
 	templatedir = ~/.git_template
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
+[difftool "sourcetree"]
+	cmd = /usr/local/bin/ksdiff -w \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /usr/local/bin/ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true

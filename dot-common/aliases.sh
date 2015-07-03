@@ -34,6 +34,7 @@ alias rmd="rm -rf"
 alias serve="php -S localhost:8000"     # use -t to specify different doc root
 alias aliases="c ~/_bin/dot-common/aliases.sh"
 alias functionz="c ~/_bin/dot-common/help-functions.sh"
+alias hosts="c ~/_ssh/known_hosts"
 alias sourcebash="source ~/.bashrc"
 alias sourcezsh="source ~/.zshrc"
 alias sourcebin=". ~/_bin/install.sh"

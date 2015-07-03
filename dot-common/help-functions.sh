@@ -5,6 +5,26 @@ function enter() {
     cd $1
 }
 
+function cs() {
+    if [ "$1" = "bash" ]; then
+        echo ' »» swithing shell to bash'
+        chsh -s `which bash`
+        bash
+        source ~/.bashrc
+    elif [ "$1" = "zsh" ]; then
+        echo ' »» swithing shell to zsh'
+        chsh -s `which zsh`
+        zsh
+        source ~/.zshrc
+    else
+        echo '...........'
+        echo ' you have to pass either "bash" or "zsh" to switch shell (cs) command as parameters'
+        echo ' »» cs bash'
+        echo ' »» cs zsh'
+        echo '...........'
+    fi
+}
+
 function update_hosts_file() {
     sudo bash -c 'cat ~/_ssh/hosts > /private/etc/hosts'
 }
@@ -78,8 +98,8 @@ function init_mac_settings() {
 }
 
 function clean_mac_setup() {
-    sudo -v # ask for the administrator password upfront.
-    xcode-select --install #install Xcode
+    # ask for the administrator password upfront
+    sudo -v
 
     # homebrew & cask
     install_brew_and_cask
@@ -98,11 +118,11 @@ function clean_mac_setup() {
     install_laravel_apps
 
     # others
-    install_vagrant_vmware_fusion
-    setup_dropbox_app_backups
+    #install_vagrant_vmware_fusion
+    #setup_dropbox_app_backups
 
     # setup mac defaults
-    init_mac_settings
+    # init_mac_settings
 }
 
 function check_brew_installation() {
@@ -133,8 +153,11 @@ function install_default_cask_apps() {
 }
 
 function install_npm_apps() {
+    sudo chown -R $USER ~/.npm
+    sudo chown -R $USER /usr/local/lib/node_modules
+
     sudo npm install -g yo bower grunt-cli gulp
-    sudo npm install --global trash
+    sudo npm install -g trash
 }
 
 function install_python_apps() {
