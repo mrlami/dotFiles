@@ -39,7 +39,7 @@ Scripts I use to setup my mac terminal (& complete system) when I wipe it clean 
 
 ##### iTerm Setup (10 mins)
 
-<img src="screenshot-bash.png" alt="screenshot" />
+<img src="screenshot-prompt.png" alt="prompt screenshot" />
 
 Following these steps will make your iTerm look identical to mine in the screenshot above.
 
