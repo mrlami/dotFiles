@@ -8,12 +8,12 @@ function enter() {
 function cs() {
     if [ "$1" = "bash" ]; then
         echo ' »» swithing shell to bash'
-        chsh -s `which bash`
+        chsh -s /bin/bash #`which bash`
         bash
         source ~/.bashrc
     elif [ "$1" = "zsh" ]; then
         echo ' »» swithing shell to zsh'
-        chsh -s `which zsh`
+        chsh -s /bin/zsh #`which zsh`
         zsh
         source ~/.zshrc
     else
@@ -171,6 +171,7 @@ function install_laravel_apps() {
     composer global require "laravel/homestead=~2.0" #homestead
     composer global require "laravel/installer=~1.1" #laravel
     composer global require "laravel/lumen-installer=~1.0" #lumen
+    composer global require "laravel/envoy=~1.0" #envoy
 }
 
 function install_composer() {

@@ -69,6 +69,7 @@ brew cask install slack
 
 # devops tools
 brew cask install iojs
+brew cask install rethinkdb
 brew cask install vmware-fusion
 brew cask install virtualbox
 brew cask install vagrant
@@ -77,6 +78,7 @@ brew cask install cornerstone
 brew cask install tower
 
 brew cask install navicat-premium
+brew cask install mysqlworkbench
 brew cask install transmit
 
 # dev tools
@@ -99,6 +101,10 @@ brew cask install gitbook
 #brew cask install totalfinder
 #brew cask install coconutbattery
 
+#brew cask install skitch
+#brew cask install selfcontrol
+#brew cask install time-out
+
 #brew cask install joinme
 #brew cask install utorrent
 #brew cask install bittorrent-sync
@@ -109,6 +115,7 @@ brew cask install gitbook
 #brew cask install webstorm
 #brew cask install intellij-idea
 #brew cask install xamarin-studio
+
 
 
 brew cask cleanup
