@@ -85,14 +85,6 @@ function bar() {
     open -a "Bartender"
 }
 
-function enable_tmux_iterm() {
-    export TMUXIFIER_TMUX_ITERM_ATTACH="-CC"
-}
-
-function disable_tmux_iterm() {
-    export TMUXIFIER_TMUX_ITERM_ATTACH=""
-}
-
 function init_mac_settings() {
     source ~/_bin/installs/mac-setup.sh
 }
@@ -106,23 +98,22 @@ function clean_mac_setup() {
     install_default_brew_apps
     install_default_cask_apps
 
-    # composer, tmuxifier, etc.
-    install_composer
+    # pygments, prezto, tmuxifier, etc.
+    install_pygments
+    install_prezto
     install_tmuxifier
     install_hushlogin
-    install_prezto
 
     # dev language apps
     install_npm_apps
-    install_python_apps
     install_laravel_apps
 
     # others
-    #install_vagrant_vmware_fusion
+    #install_vagrant_plugins
     #setup_dropbox_app_backups
 
     # setup mac defaults
-    # init_mac_settings
+    #init_mac_settings
 }
 
 function check_brew_installation() {
@@ -157,14 +148,8 @@ function install_npm_apps() {
     sudo chown -R $USER /usr/local/lib/node_modules
 
     sudo npm install -g yo bower grunt-cli gulp
+    sudo npm install -g browserify
     sudo npm install -g trash
-}
-
-function install_python_apps() {
-    install_pygments
-
-    echo "Installing pip..."
-    sudo easy_install pip
 }
 
 function install_laravel_apps() {
@@ -172,16 +157,6 @@ function install_laravel_apps() {
     composer global require "laravel/installer=~1.1" #laravel
     composer global require "laravel/lumen-installer=~1.0" #lumen
     composer global require "laravel/envoy=~1.0" #envoy
-}
-
-function install_composer() {
-    if (type composer > /dev/null && [ "$1" != "force" ]); then
-        echo "«Composer is already installed»"
-    else
-        echo "Installing Composer..."
-        curl -sS https://getcomposer.org/installer | php
-        mv composer.phar /usr/local/bin/composer
-    fi
 }
 
 function install_tmuxifier() {
@@ -240,7 +215,16 @@ function install_pygments() {
     fi
 }
 
-function install_vagrant_vmware_fusion() {
+function install_vagrant_plugins() {
+    # https://github.com/mitchellh/vagrant/wiki/Available-Vagrant-Plugins
+    vagrant plugin install vagrant-hostmanager
+    vagrant plugin install vagrant-reload
+
+    vagrant plugin install vagrant-aws
+    vagrant plugin install vagrant-digitalocean
+    vagrant plugin install vagrant-linode
+    vagrant plugin install vagrant-vultr
+
     vagrant plugin install vagrant-vmware-fusion
     vagrant plugin license vagrant-vmware-fusion ~/Dropbox/Apps/_licenses/vagrant-vmware-fusion-license.lic
 }
@@ -259,8 +243,8 @@ function sgclone() {
 #request a review
 function sgreview() {
     if [ -z "$1" ]; then
-        rbt post --username mrlami -o
+        rbt post --username mrlami -o -X '*.png' -X '*.jpg' -X '*.map' -X '*.min.js' -X '*.min.css'
     else
-        rbt post -r $1 -o
+        rbt post -r $1 -o -X '*.png' -X '*.jpg' -X '*.map' -X '*.min.js' -X '*.min.css'
     fi
 }

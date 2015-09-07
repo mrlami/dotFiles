@@ -12,30 +12,34 @@ brew upgrade
 
 # brew installs
 brew install ack
-brew install bash
 brew install gawk
 brew install nano
+brew install openssl
 brew install tmux
 brew install tree
 brew install wget
+
+brew install bash
 brew install zsh
 
 brew install git
-brew install ngrok
+brew install mycli
+brew install pgcli --ignore-dependencies
 
-brew install redis
-brew install postgresql
-brew install pgcli
+brew install iojs
+brew install rethinkdb
 
 brew install php56
 brew install php56-mcrypt
-brew install php56-pdo-pgsql
+brew install php56-pdo-pgsql --ignore-dependencies
+brew install php56-xdebug
 
-brew install boris
+brew install composer
 brew install codeception
+brew install boris
 
-#misc setup
-ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
-launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
+brew install ngrok
+brew install speed-test
+
 
 brew cleanup

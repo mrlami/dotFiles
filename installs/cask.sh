@@ -26,7 +26,7 @@ brew cask install itsycal
 brew cask install atext
 brew cask install alfred
 brew cask install moom
-brew cask install xtrafinder
+brew cask install xtrafinder #totalfinder
 
 brew cask install iterm2
 brew cask install keka
@@ -45,20 +45,20 @@ brew cask install screenflow
 #brew cask install --appdir="/Applications" camtasia
 #brew cask install --appdir="/Applications" cleanmymac
 
-
 # media apps
 brew cask install 4k-video-downloader
 brew cask install handbrake
 brew cask install vlc
 
-
 # cloud & web apps
 brew cask install dropbox
 brew cask install google-drive
+brew cask install bittorrent-sync
 brew cask install transmission
 
-brew cask install google-chrome
 brew cask install firefoxdeveloperedition
+brew cask install google-chrome
+brew cask install opera
 
 #communication tools
 brew cask install joinme
@@ -68,13 +68,12 @@ brew cask install skype
 brew cask install slack
 
 # devops tools
-brew cask install iojs
-brew cask install rethinkdb
 brew cask install vmware-fusion
 brew cask install virtualbox
 brew cask install vagrant
 
 brew cask install cornerstone
+brew cask install gitup
 brew cask install tower
 
 brew cask install navicat-premium
@@ -90,32 +89,13 @@ brew cask install rbtools
 
 brew cask install sketch
 brew cask install sublime-text3
-brew cask install java6 phpstorm
+brew cask install java6 appcode intellij-idea #phpstorm #webstorm
+
+# network tools
+bcin xquartz wireshark
 
 # office tools
 brew cask install macdown
-brew cask install gitbook
-
-#others
-#brew cask install appcleaner
-#brew cask install totalfinder
-#brew cask install coconutbattery
-
-#brew cask install skitch
-#brew cask install selfcontrol
-#brew cask install time-out
-
-#brew cask install joinme
-#brew cask install utorrent
-#brew cask install bittorrent-sync
-
-#brew cask install pgadmin3
-
-#brew cask install appcode
-#brew cask install webstorm
-#brew cask install intellij-idea
-#brew cask install xamarin-studio
-
 
 
 brew cask cleanup
