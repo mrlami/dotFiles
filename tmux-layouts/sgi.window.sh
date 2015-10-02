@@ -1,11 +1,11 @@
 window_root "~/Downloads"
 new_window "sgi-window"
 
-run_cmd "ssh lami@scbz-uat-web1"
-
-split_v 50
-select_pane 0
-run_cmd "ssh lami@scbz-uat-db1"
+run_cmd "ssh scbz-uat-web1"
 
 split_h 50
 echo "health » writing » skills » work » errands"
+
+select_pane 0
+split_v 50
+run_cmd "ssh scbz-uat-db1"

@@ -24,22 +24,22 @@ brew install zsh
 
 brew install git
 brew install mycli
-brew install pgcli --ignore-dependencies
+brew install ngrok
 
-brew install iojs
+brew install nvm
+brew install composer
+
 brew install rethinkdb
+brew install postgresql
+brew install pgcli --ignore-dependencies
 
 brew install php56
 brew install php56-mcrypt
 brew install php56-pdo-pgsql --ignore-dependencies
 brew install php56-xdebug
 
-brew install composer
 brew install codeception
 brew install boris
-
-brew install ngrok
-brew install speed-test
 
 
 brew cleanup

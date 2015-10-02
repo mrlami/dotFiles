@@ -65,7 +65,7 @@ alias gpl='git pull'
 alias gcl='git clone'
 alias gco='git checkout'
 alias gcomp='gl master..origin/master'  #check what commits have been added to upstream
-alias gshow='git show --name-status'
+alias gshow='git show --name-status' #check what files were changed in previous commits
 
 # Vagrant
 alias v='vagrant'
@@ -84,12 +84,11 @@ alias b='brew'
 alias bs='brew search'
 alias bin='brew install'
 alias bun='brew uninstall'
-alias bcl='brew update && brew upgrade --all && brew cleanup'
+alias bcl='brew update && brew upgrade --all && brew cleanup && brew cask cleanup'
 alias bc='brew cask'
 alias bcs='brew cask search'
 alias bcin='brew cask install'
 alias bcun='brew cask uninstall'
-alias bccl='brew cask update && brew cask cleanup'
 
 # Tmux & Tmuxifier
 alias mux='tmuxifier'
@@ -101,11 +100,12 @@ alias nlist='npm list -g --depth=0'
 
 
 ## paths ##
-export PATH="$HOME/.composer/vendor/bin:$PATH"
 
 #homebrew
 export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
 
 #tmuxifier
 export PATH="$HOME/.tmuxifier/bin:$PATH"

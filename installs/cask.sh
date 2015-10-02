@@ -34,12 +34,10 @@ brew cask install namechanger
 brew cask install imageoptim
 
 brew cask install launchpad-manager-yosemite
+brew cask install quicklook-json
 brew cask install wallpaper-wizard
 
 brew cask install cloudup
-brew cask install droplr
-brew cask install quicklook-json
-
 brew cask install screenflow
 #brew cask install --appdir="/Applications" snagit
 #brew cask install --appdir="/Applications" camtasia
@@ -47,25 +45,29 @@ brew cask install screenflow
 
 # media apps
 brew cask install 4k-video-downloader
-brew cask install handbrake
+brew cask install audacity
 brew cask install vlc
+
+# office tools
+brew cask install macdown
 
 # cloud & web apps
 brew cask install dropbox
 brew cask install google-drive
 brew cask install bittorrent-sync
 brew cask install transmission
+brew cask install wd-my-cloud
 
-brew cask install firefoxdeveloperedition
+#brew cask install firefoxdeveloperedition
 brew cask install google-chrome
-brew cask install opera
+#brew cask install opera
 
 #communication tools
-brew cask install joinme
-brew cask install hipchat
-brew cask install screenhero
-brew cask install skype
-brew cask install slack
+#brew cask install joinme
+#brew cask install hipchat
+#brew cask install screenhero
+#brew cask install skype
+#brew cask install slack
 
 # devops tools
 brew cask install vmware-fusion
@@ -73,7 +75,6 @@ brew cask install virtualbox
 brew cask install vagrant
 
 brew cask install cornerstone
-brew cask install gitup
 brew cask install tower
 
 brew cask install navicat-premium
@@ -89,13 +90,10 @@ brew cask install rbtools
 
 brew cask install sketch
 brew cask install sublime-text3
-brew cask install java6 appcode intellij-idea #phpstorm #webstorm
+brew cask install java6
 
 # network tools
-bcin xquartz wireshark
-
-# office tools
-brew cask install macdown
+#bcin xquartz wireshark
 
 
 brew cask cleanup

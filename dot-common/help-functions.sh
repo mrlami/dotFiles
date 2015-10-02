@@ -105,8 +105,8 @@ function clean_mac_setup() {
     install_hushlogin
 
     # dev language apps
-    install_npm_apps
-    install_laravel_apps
+    install_node_apps
+    install_php_apps
 
     # others
     #install_vagrant_plugins
@@ -143,16 +143,19 @@ function install_default_cask_apps() {
     fi
 }
 
-function install_npm_apps() {
-    sudo chown -R $USER ~/.npm
-    sudo chown -R $USER /usr/local/lib/node_modules
+function install_node_apps() {
+    #install latest version of node and set it as default
+    nvm install node
+    nvm alias default node
 
-    sudo npm install -g yo bower grunt-cli gulp
-    sudo npm install -g browserify
-    sudo npm install -g trash
+    #install node apps
+    npm install -g yo bower grunt-cli gulp
+    npm install -g browserify
+    npm install -g trash
+    npm install -g speed-test
 }
 
-function install_laravel_apps() {
+function install_php_apps() {
     composer global require "laravel/homestead=~2.0" #homestead
     composer global require "laravel/installer=~1.1" #laravel
     composer global require "laravel/lumen-installer=~1.0" #lumen
