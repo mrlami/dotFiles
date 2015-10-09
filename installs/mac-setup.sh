@@ -107,10 +107,10 @@ sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutio
 # 10: Put display to sleep
 # 11: Launchpad
 # 12: Notification Center
-# Top left screen corner → Put display to sleep
-defaults write com.apple.dock wvous-tl-corner -int 10
 # Bottom left screen corner → Start screen saver
-defaults write com.apple.dock wvous-bl-corner -int 5
+defaults write com.apple.dock wvous-bl-corner -int 10
+# Top left screen corner → Put display to sleep
+#defaults write com.apple.dock wvous-tl-corner -int 5
 
 
 ###############################################################################

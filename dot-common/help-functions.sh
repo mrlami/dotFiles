@@ -62,7 +62,7 @@ function mac() {
 }
 
 function bar() {
-    osascript -e 'quit app "Bartender"'
+    osascript -e 'quit app "Bartender 2"'
 
     if [ -z "$1" ] || [ "$1" = "default" ]; then
         ln -sf ~/Dropbox/Apps/Bartender/com.surteesstudios.Bartender.plist ~/Library/Preferences/com.surteesstudios.Bartender.plist
@@ -82,7 +82,7 @@ function bar() {
         echo "✓ loaded **all** bartendar settings"
     fi
 
-    open -a "Bartender"
+    open -a "Bartender 2"
 }
 
 function init_mac_settings() {
@@ -230,6 +230,13 @@ function install_vagrant_plugins() {
 
     vagrant plugin install vagrant-vmware-fusion
     vagrant plugin license vagrant-vmware-fusion ~/Dropbox/Apps/_licenses/vagrant-vmware-fusion-license.lic
+
+    echo '--------------------------------------'
+    echo 'you might want to install below boxes:'
+    echo '--------------------------------------'
+    echo 'vagrant box add bento/ubuntu-14.04'
+    echo 'vagrant box add laravel/homestead'
+    echo '--------------------------------------'
 }
 
 #clone a repository and cd into it

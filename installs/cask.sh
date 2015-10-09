@@ -44,7 +44,6 @@ brew cask install screenflow
 #brew cask install --appdir="/Applications" cleanmymac
 
 # media apps
-brew cask install 4k-video-downloader
 brew cask install audacity
 brew cask install vlc
 
@@ -73,6 +72,7 @@ brew cask install google-chrome
 brew cask install vmware-fusion
 brew cask install virtualbox
 brew cask install vagrant
+brew cask install vagrantmanager
 
 brew cask install cornerstone
 brew cask install tower
