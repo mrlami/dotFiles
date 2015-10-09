@@ -1,7 +1,5 @@
 
-=========
-
-Scripts I use to setup my mac terminal (& complete system) when I wipe it clean which happens quite often.  It borrows from barryclark/bashstrap, andrew8088/dotfiles, and kevinSuttle/dotfiles.
+These are scripts I use to setup my mac after a clean install (which I like to do quite often).  They borrow heavily from barryclark/bashstrap, andrew8088/dotfiles, and kevinSuttle/dotfiles.
 
 ### Features
 - Customized ***bash***
@@ -57,21 +55,28 @@ Run ```clean_mac_setup``` from command-line.
 Run individual install commands
 
     # homebrew & cask
-    install_homebrew_and_cask
-    install_default_homebrew_apps
+    install_brew_and_cask
+    install_default_brew_apps
     install_default_cask_apps
 
-    # composer, tmuxifier, etc.
-    install_php_composer
-    install_tmuxifier
-    install_prezto
-    install_hushlogin
+    # pygments, prezto, tmuxifier, etc.
     install_pygments
+    install_prezto
+    install_tmuxifier
+    install_hushlogin
 
-    # personal
-    #install_vagrant_vmware_fusion
+    # dev language apps
+    install_node_apps
+    install_php_apps
+
+    # others
+    install_vagrant_plugins
+    setup_dropbox_app_backups
+
+    # others
+    #install_vagrant_plugins
     #setup_dropbox_app_backups
-    #init_mac_settings
+    #setup_mac_defaults
 
 ####Default Homebrew Installs
 - [brew.sh](https://github.com/mrlami/dotFiles/blob/master/installs/brew.sh)

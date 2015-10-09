@@ -85,7 +85,7 @@ function bar() {
     open -a "Bartender 2"
 }
 
-function init_mac_settings() {
+function setup_mac_defaults() {
     source ~/_bin/installs/mac-setup.sh
 }
 
@@ -111,9 +111,7 @@ function clean_mac_setup() {
     # others
     #install_vagrant_plugins
     #setup_dropbox_app_backups
-
-    # setup mac defaults
-    #init_mac_settings
+    #setup_mac_defaults
 }
 
 function check_brew_installation() {
