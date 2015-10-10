@@ -93,6 +93,7 @@ function setup_mac_defaults() {
 function clean_mac_setup() {
     # ask for the administrator password upfront
     sudo -v
+    mac
 
     # homebrew & cask
     install_brew_and_cask
