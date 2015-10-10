@@ -51,18 +51,16 @@ brew cask install vlc
 brew cask install macdown
 
 # cloud & web apps
+brew cask install bittorrent-sync
 brew cask install dropbox
 brew cask install google-drive
-brew cask install bittorrent-sync
 brew cask install transmission
 brew cask install wd-my-cloud
 
-#brew cask install firefoxdeveloperedition
 brew cask install google-chrome
-#brew cask install opera
+brew cask install google-chrome google-chrome-canary
 
 #communication tools
-#brew cask install joinme
 #brew cask install hipchat
 #brew cask install screenhero
 #brew cask install skype

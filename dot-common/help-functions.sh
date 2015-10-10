@@ -86,6 +86,7 @@ function bar() {
 }
 
 function setup_mac_defaults() {
+    #reference https://github.com/kevinSuttle/OSXDefaults
     source ~/_bin/installs/mac-setup.sh
 }
 
@@ -103,6 +104,7 @@ function clean_mac_setup() {
     install_prezto
     install_tmuxifier
     install_hushlogin
+    install_vimrc_ultimate
 
     # dev language apps
     install_node_apps
@@ -214,6 +216,12 @@ function install_pygments() {
         echo "Installing Pygments..."
         sudo easy_install Pygments
     fi
+}
+
+function install_vimrc_ultimate() {
+    #https://github.com/amix/vimrc
+    git clone https://github.com/amix/vimrc.git ~/.vim_runtime
+    sh ~/.vim_runtime/install_awesome_vimrc.sh
 }
 
 function install_vagrant_plugins() {
