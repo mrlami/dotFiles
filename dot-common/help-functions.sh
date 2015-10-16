@@ -30,6 +30,13 @@ function update_hosts_file() {
 }
 
 function setup_dropbox_app_backups() {
+    # Bartender
+    open -a "Bartender"
+    osascript -e 'quit app "Bartender"'
+    mv ~/Library/Preferences/com.surteesstudios.Bartender.plist ~/Library/Preferences/com.surteesstudios.Bartender.bak.plist
+    ln -sf ~/Dropbox/Apps/Bartender/com.surteesstudios.Bartender.plist ~/Library/Preferences/com.surteesstudios.Bartender.plist
+    defaults read com.surteesstudios.Bartender
+
     # Moom
     open -a "Moom"
     osascript -e 'quit app "Moom"'
@@ -38,12 +45,11 @@ function setup_dropbox_app_backups() {
     mkdir -p ~/Library/Application\ Support/Moom
     ln -sf ~/Dropbox/Apps/Moom/Blacklist.plist ~/Library/Application\ Support/Moom/Blacklist.plist
 
-    # Bartender
-    open -a "Bartender"
-    osascript -e 'quit app "Bartender"'
-    mv ~/Library/Preferences/com.surteesstudios.Bartender.plist ~/Library/Preferences/com.surteesstudios.Bartender.bak.plist
-    ln -sf ~/Dropbox/Apps/Bartender/com.surteesstudios.Bartender.plist ~/Library/Preferences/com.surteesstudios.Bartender.plist
-    defaults read com.surteesstudios.Bartender
+    # Sublime Text
+    open -a "Sublime Text"
+    osascript -e 'quit app "Sublime Text"'
+    mv ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User.orig.bak
+    ln -s ~/Dropbox/Apps/SublimeText/User
 }
 
 function mac() {
@@ -85,11 +91,6 @@ function bar() {
     open -a "Bartender 2"
 }
 
-function setup_mac_defaults() {
-    #reference https://github.com/kevinSuttle/OSXDefaults
-    source ~/_bin/installs/mac-setup.sh
-}
-
 function clean_mac_setup() {
     # ask for the administrator password upfront
     sudo -v
@@ -112,9 +113,30 @@ function clean_mac_setup() {
     install_php_apps
 
     # others
-    #install_vagrant_plugins
-    #setup_dropbox_app_backups
-    #setup_mac_defaults
+    install_vagrant_plugins
+    setup_dropbox_app_backups
+    setup_mac_defaults
+}
+
+function list_all_installs() {
+    echo '=============================================================='
+    echo 'run "install_brew_and_cask" - to install homebrew and homebrew-cask'
+    echo 'run "install_default_brew_apps" - to install homebrew apps (reference https://github.com/mrlami/dotFiles)'
+    echo 'run "install_default_cask_apps" - to install cask apps (reference https://github.com/mrlami/dotFiles)'
+    echo ''
+    echo 'run "install_prezto" - to install prezto'
+    echo 'run "install_tmuxifier" - to install tmuxifier'
+    echo 'run "install_hushlogin" - to install hushlogin'
+    echo 'run "install_pygments" - to install pygments'
+    echo 'run "install_vimrc_ultimate" - to install ultimate vimrc'
+    echo ''
+    echo 'run "install_vagrant_plugins" - to install vmware plugin and license for vagrant'
+    echo 'run "install_node_apps" - to default node applications'
+    echo 'run "install_php_apps" - to install default php applications'
+    echo ''
+    echo 'run "setup_dropbox_app_backups" - to setup settings for misc apps'
+    echo 'run "setup_mac_app_defaults" - to initialize mac settings for misc apps'
+    echo '=============================================================='
 }
 
 function check_brew_installation() {
@@ -134,13 +156,13 @@ function install_brew_and_cask() {
 
 function install_default_brew_apps() {
     if check_brew_installation; then
-        source ~/_bin/installs/brew.sh
+        source ~/_bin/install-brew.sh
     fi
 }
 
 function install_default_cask_apps() {
     if check_brew_installation; then
-        source ~/_bin/installs/cask.sh
+        source ~/_bin/install-cask.sh
     fi
 }
 
@@ -246,15 +268,194 @@ function install_vagrant_plugins() {
     echo '--------------------------------------'
 }
 
+#reference https://github.com/kevinSuttle/OSXDefaults
+function setup_mac_app_defaults() {
+    ###############################################################################
+    # Finder                                                                      #
+    ###############################################################################
+    # Finder: show hidden files by default
+    #defaults write com.apple.finder AppleShowAllFiles -bool true
+
+    # Finder: show all filename extensions
+    defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+    # Finder: show status bar
+    defaults write com.apple.finder ShowStatusBar -bool true
+
+    # Finder: show path bar
+    defaults write com.apple.finder ShowPathbar -bool true
+
+    # Finder: allow text selection in Quick Look
+    defaults write com.apple.finder QLEnableTextSelection -bool true
+
+    # Display full POSIX path as Finder window title
+    #defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+
+    # When performing a search, search the current folder by default
+    defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+
+    # Disable the warning when changing a file extension
+    defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+    # Enable spring loading for directories
+    #defaults write NSGlobalDomain com.apple.springing.enabled -bool true
+
+    # Remove the spring loading delay for directories
+    #defaults write NSGlobalDomain com.apple.springing.delay -float 0
+
+    # Avoid creating .DS_Store files on network volumes
+    defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+    # Use list view in all Finder windows by default
+    # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`, `Nlsv`
+    defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
+
+    # Disable the warning before emptying the Trash
+    defaults write com.apple.finder WarnOnEmptyTrash -bool false
+
+    # Empty Trash securely by default
+    #defaults write com.apple.finder EmptyTrashSecurely -bool true
+
+    # Show the ~/Library folder
+    chflags nohidden ~/Library
+
+    # Expand the following File Info panes:
+    # “General”, “Open with”, and “Sharing & Permissions”
+    defaults write com.apple.finder FXInfoPanesExpanded -dict \
+        General -bool true \
+        OpenWith -bool true \
+        Privileges -bool true
+
+
+    ###############################################################################
+    # Dock, Dashboard & Mission Control
+    ###############################################################################
+
+    # Wipe all (default) app icons from the Dock? (y/n)
+    defaults write com.apple.dock persistent-apps -array
+
+    # Setting the icon size of Dock items to 50 pixels for optimal size/screen-realestate
+    defaults write com.apple.dock tilesize -int 45
+
+    # Set Dock to auto-hide
+    defaults write com.apple.dock autohide -bool true
+
+    # Show indicator lights for open applications in the Dock
+    defaults write com.apple.dock show-process-indicators -bool true
+
+
+    ###############################################################################
+    # Safari & WebKit                                                             #
+    ###############################################################################
+
+    # Privacy: don’t send search queries to Apple
+    defaults write com.apple.Safari UniversalSearchEnabled -bool false
+    defaults write com.apple.Safari SuppressSearchSuggestions -bool true
+
+    # Show the full URL in the address bar (note: this still hides the scheme)
+    defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
+
+    # Set Safari’s home page to `about:blank` for faster loading
+    defaults write com.apple.Safari HomePage -string "about:blank"
+
+    # Prevent Safari from opening ‘safe’ files automatically after downloading
+    defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
+
+    # Disable Safari’s thumbnail cache for History and Top Sites
+    defaults write com.apple.Safari DebugSnapshotsUpdatePolicy -int 2
+
+    # Enable Safari’s debug menu
+    defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+
+    # Remove useless icons from Safari’s bookmarks bar
+    defaults write com.apple.Safari ProxiesInBookmarksBar "()"
+
+    # Enable the Develop menu and the Web Inspector in Safari
+    defaults write com.apple.Safari IncludeDevelopMenu -bool true
+    defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+    defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
+
+    # Add a context menu item for showing the Web Inspector in web views
+    defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+
+
+    ###############################################################################
+    # Terminal & iTerm 2                                                          #
+    ###############################################################################
+    # Only use UTF-8 in Terminal.app
+    defaults write com.apple.terminal StringEncodings -array 4
+
+    # Don’t display the annoying prompt when quitting iTerm
+    defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+
+
+    ###############################################################################
+    # Activity Monitor                                                            #
+    ###############################################################################
+
+    # Show the main window when launching Activity Monitor
+    defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
+
+    # Visualize CPU usage in the Activity Monitor Dock icon
+    defaults write com.apple.ActivityMonitor IconType -int 5
+
+    # Show all processes in Activity Monitor
+    defaults write com.apple.ActivityMonitor ShowCategory -int 0
+
+    # Sort Activity Monitor results by CPU usage
+    defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
+    defaults write com.apple.ActivityMonitor SortDirection -int 0
+
+
+    ###############################################################################
+    # Mac App Store                                                               #
+    ###############################################################################
+
+    # Enable the WebKit Developer Tools in the Mac App Store
+    defaults write com.apple.appstore WebKitDeveloperExtras -bool true
+
+    # Enable Debug Menu in the Mac App Store
+    defaults write com.apple.appstore ShowDebugMenu -bool true
+
+
+    ###############################################################################
+    # Google Chrome & Google Chrome Canary                                        #
+    ###############################################################################
+
+    # Allow installing user scripts via GitHub Gist or Userscripts.org
+    defaults write com.google.Chrome ExtensionInstallSources -array "https://gist.githubusercontent.com/" "http://userscripts.org/*"
+    defaults write com.google.Chrome.canary ExtensionInstallSources -array "https://gist.githubusercontent.com/" "http://userscripts.org/*"
+
+    # Disable the all too sensitive backswipe
+    defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
+    defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool false
+
+
+    ###############################################################################
+    # Transmission.app                                                            #
+    ###############################################################################
+
+    # Use `~/Downloads/_transit/torrents` to store incomplete downloads
+    mkdir -p ~/Downloads/_torrents
+    defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
+    defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Downloads/_torrents"
+
+    # Don’t prompt for confirmation before downloading
+    defaults write org.m0k.transmission DownloadAsk -bool false
+
+    # Trash original torrent files
+    defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
+
+    # Hide the donate message
+    defaults write org.m0k.transmission WarningDonate -bool false
+
+    # Hide the legal disclaimer
+    defaults write org.m0k.transmission WarningLegal -bool false
+}
+
 #clone a repository and cd into it
 function sgclone() {
     git clone ssh://l_adabonyan@172.30.204.246:29418/SCBZ/$1.git $2
-
-    if [ $# -lt 2 ]; then
-        cd $1
-    else
-        cd $2
-    fi
 }
 
 #request a review

@@ -1,8 +1,8 @@
 ## environment - bash ##
 
 # Map up & down arrow keys to do fuzzy history search
-bind '"[A":history-search-backward'
-bind '"[B":history-search-forward'
+bind '"\e[A":history-search-backward'
+bind '"\e[B":history-search-forward'
 
 # Modified version of @gf3’s Sexy Bash Prompt - https://github.com/gf3/dotfiles
 if [[ $COLORTERM = gnome-* && $TERM = xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then

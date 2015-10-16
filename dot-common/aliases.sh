@@ -100,10 +100,9 @@ alias nlist='npm list -g --depth=0'
 
 
 ## paths ##
-
 #homebrew
+export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 

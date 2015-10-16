@@ -52,6 +52,7 @@ brew cask install macdown
 
 # cloud & web apps
 brew cask install bittorrent-sync
+brew cask install box-sync
 brew cask install dropbox
 brew cask install google-drive
 brew cask install transmission
@@ -70,7 +71,7 @@ brew cask install google-chrome google-chrome-canary
 brew cask install vmware-fusion
 brew cask install virtualbox
 brew cask install vagrant
-brew cask install vagrantmanager
+brew cask install vagrant-manager
 
 brew cask install cornerstone
 brew cask install tower
