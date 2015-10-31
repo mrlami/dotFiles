@@ -9,3 +9,6 @@ source ~/_bin/dot-common/help-functions.sh
 
 # init z - https://github.com/rupa/z
 source ~/_bin/dot-common/z.sh
+
+#zsh auto-completions
+fpath=(/usr/local/share/zsh-completions $fpath)

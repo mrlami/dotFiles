@@ -18,9 +18,11 @@ brew install openssl
 brew install tmux
 brew install tree
 brew install wget
+brew install httpie
 
 brew install bash
 brew install zsh
+brew install zsh-completions
 
 brew install git
 brew install mycli

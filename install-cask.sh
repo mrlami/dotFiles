@@ -8,15 +8,14 @@ brew cask doctor
 
 
 #fonts
-brew cask install font-source-code-pro.rb
-brew cask install font-source-code-pro-for-powerline
-brew cask install font-ubuntu-mono-powerline
+brew cask install font-blokk.rb
+brew cask install font-hack.rb
 brew cask install font-nexa
 brew cask install font-open-sans.rb
 brew cask install font-open-sans-condensed.rb
-brew cask install font-roboto.rb
-brew cask install font-roboto-mono.rb
-brew cask install font-roboto-slab.rb
+brew cask install font-source-code-pro.rb
+brew cask install font-source-code-pro-for-powerline
+brew cask install font-ubuntu-mono-powerline
 
 # utility apps
 brew cask install bartender
@@ -52,16 +51,12 @@ brew cask install macdown
 
 # cloud & web apps
 brew cask install bittorrent-sync
-brew cask install box-sync
 brew cask install dropbox
+brew cask install google-chrome #google-chrome-canary
 brew cask install google-drive
 brew cask install transmission
-brew cask install wd-my-cloud
 
-brew cask install google-chrome
-brew cask install google-chrome google-chrome-canary
-
-#communication tools
+# communication tools
 #brew cask install hipchat
 #brew cask install screenhero
 #brew cask install skype
@@ -74,6 +69,7 @@ brew cask install vagrant
 brew cask install vagrant-manager
 
 brew cask install cornerstone
+brew cask install gitup
 brew cask install tower
 
 brew cask install navicat-premium
@@ -92,7 +88,8 @@ brew cask install sublime-text3
 brew cask install java6
 
 # network tools
-#bcin xquartz wireshark
+#brew cask install namebench
+#brew cask install xquartz wireshark
 
 
 brew cask cleanup
