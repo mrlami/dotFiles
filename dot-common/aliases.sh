@@ -93,10 +93,14 @@ alias bcun='brew cask uninstall'
 # Tmux & Tmuxifier
 alias mux='tmuxifier'
 
-# iojs & Sailsjs
+# Node
 alias nlist='npm list -g --depth=0'
 
-# PHP & Laravel
+# Laravel
+alias homestead='~/.composer/vendor/bin/homestead'
+alias laravel='~/.composer/vendor/bin/laravel'
+alias lumen='~/.composer/vendor/bin/lumen'
+alias envoy='~/.composer/vendor/bin/envoy'
 
 
 ## paths ##

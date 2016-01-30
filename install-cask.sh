@@ -45,6 +45,7 @@ brew cask install screenflow
 # media apps
 brew cask install audacity
 brew cask install vlc
+brew cask install vox
 
 # office tools
 brew cask install macdown
@@ -58,9 +59,9 @@ brew cask install transmission
 
 # communication tools
 #brew cask install hipchat
-#brew cask install screenhero
 #brew cask install skype
 #brew cask install slack
+#brew cask install textual
 
 # devops tools
 brew cask install vmware-fusion
@@ -85,7 +86,6 @@ brew cask install rbtools
 
 brew cask install sketch
 brew cask install sublime-text3
-brew cask install java6
 
 # network tools
 #brew cask install namebench
@@ -93,3 +93,4 @@ brew cask install java6
 
 
 brew cask cleanup
+defaults write com.runningwithcrayons.Alfred-Preferences dropbox.allowappsfolder -bool TRUE

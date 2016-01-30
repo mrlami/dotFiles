@@ -179,9 +179,9 @@ function install_node_apps() {
 }
 
 function install_php_apps() {
-    composer global require "laravel/homestead=~2.0" #homestead
-    composer global require "laravel/installer=~1.1" #laravel
-    composer global require "laravel/lumen-installer=~1.0" #lumen
+    composer global require "laravel/homestead" #homestead
+    composer global require "laravel/installer" #laravel
+    composer global require "laravel/lumen-installer" #lumen
     composer global require "laravel/envoy=~1.0" #envoy
 }
 
@@ -436,9 +436,9 @@ function setup_mac_app_defaults() {
     ###############################################################################
 
     # Use `~/Downloads/_transit/torrents` to store incomplete downloads
-    mkdir -p ~/Downloads/_torrents
+    mkdir -p ~/Downloads/_stuff/torrents
     defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
-    defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Downloads/_torrents"
+    defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Downloads/_stuff/torrents"
 
     # Don’t prompt for confirmation before downloading
     defaults write org.m0k.transmission DownloadAsk -bool false
@@ -461,8 +461,8 @@ function sgclone() {
 #request a review
 function sgreview() {
     if [ -z "$1" ]; then
-        rbt post --username mrlami -o -X '*.png' -X '*.jpg' -X '*.map' -X '*.min.js' -X '*.min.css'
+        rbt post --username mrlami -o -g -X '*.ico' -X '*.gif' -X '*.png' -X '*.jpg' -X '*.map' -X '*.min.js' -X '*.min.css' -X '*/app/*.php' -X '*/fonts/*'
     else
-        rbt post -r $1 -o -X '*.png' -X '*.jpg' -X '*.map' -X '*.min.js' -X '*.min.css'
+        rbt post -r $1 -o -g -X '*.png' -X '*.ico' -X '*.gif' -X '*.png' -X '*.jpg' -X '*.map' -X '*.min.js' -X '*.min.css' -X '*/app/*.php' -X '*/fonts/*'
     fi
 }

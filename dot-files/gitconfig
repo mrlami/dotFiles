@@ -36,13 +36,28 @@
 [diff]
 	tool = Kaleidoscope
 [mergetool]
-	prompt = false
+	prompt = true
 	keepBackup = true
 [difftool]
-	prompt = false
+	prompt = true
 [init]
 	templatedir = ~/.git_template
 [filter "lfs"]
 	clean = git lfs clean %f
 	smudge = git lfs smudge %f
 	required = true
+
+[alias]
+	# List contributors with number of commits
+	contributors = shortlog --summary --numbered
+
+    # Generate info for CM (currently updates only and SCBZ only)
+    cmi = "!f() { \
+        REPO=$(git remote show -n origin | grep Push | cut -d : -f 2- | cut -d \"/\" -f 4 -f 5); \
+		LASTCOMMIT=$(git log --pretty=format:'%H' -n 1); \
+		REPOPATH=$(echo $REPO | cut -d \".\" -f 1 | awk '{print tolower($0)}'); \
+		SRVPATH='/var/websites/'$REPOPATH'/'; \
+        git diff --name-only $1 $2 | xargs -IREPLACE echo $'Update '$SRVPATH'REPLACE\nWith ['$REPO'] REPLACE\n'; \
+		echo 'commit '$LASTCOMMIT; \
+		echo '\n\nIn source control ['$REPO'] master branch\ncommit ' $LASTCOMMIT; \
+        }; f"
