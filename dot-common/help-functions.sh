@@ -25,10 +25,6 @@ function cs() {
     fi
 }
 
-function update_hosts_file() {
-    sudo bash -c 'cat ~/_ssh/hosts > /private/etc/hosts'
-}
-
 function setup_dropbox_app_backups() {
     # Bartender
     open -a "Bartender"
@@ -150,8 +146,7 @@ function check_brew_installation() {
 
 function install_brew_and_cask() {
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    brew doctor
-    brew install caskroom/cask/brew-cask
+    brew tap caskroom/cask
 }
 
 function install_default_brew_apps() {
@@ -179,10 +174,13 @@ function install_node_apps() {
 }
 
 function install_php_apps() {
-    composer global require "laravel/homestead" #homestead
-    composer global require "laravel/installer" #laravel
-    composer global require "laravel/lumen-installer" #lumen
-    composer global require "laravel/envoy=~1.0" #envoy
+    composer global require "hirak/prestissimo" #parallel install plugin (speeds up composer)
+    composer global require "fabpot/php-cs-fixer"
+
+    composer global require "laravel/homestead"
+    composer global require "laravel/installer"
+    composer global require "laravel/lumen-installer"
+    composer global require "laravel/envoy=~1.0"
 }
 
 function install_tmuxifier() {

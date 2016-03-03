@@ -22,25 +22,27 @@ alias hssh="cd ~/_ssh"
 alias d="cd ~/Downloads"
 alias a="cd /apps"
 alias code="cd /apps/_code"
-alias dl="cd /apps/datalogiq"
+alias dl="cd /apps/_code"
 alias mx="cd /apps/munetrix"
 alias sg="cd /apps/scigames"
 
 # Shortcuts for misc commands
-alias s='open -a "Sublime Text"'
 alias cl="clear"
+alias clearcache="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;say cache flushed"
 alias p="ping -c 5"
 alias rmd="rm -rf"
+alias s='open -a "Sublime Text"'
 alias serve="php -S localhost:8000"     # use -t to specify different doc root
+alias updatehosts="sudo bash -c 'cat ~/_ssh/hosts > /private/etc/hosts'"
+
 alias aliases="c ~/_bin/dot-common/aliases.sh"
 alias functionz="c ~/_bin/dot-common/help-functions.sh"
 alias hosts="c ~/_ssh/hosts"
 alias sourcebash="source ~/.bashrc"
 alias sourcezsh="source ~/.zshrc"
-alias sourcebin=". ~/_bin/install.sh"
-alias sourcessh=". ~/_ssh/install.sh"
-alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
-alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+alias sourcebin="source ~/_bin/install.sh"
+alias sourcessh="source ~/_ssh/install.sh"
+
 alias renamelower='for f in *; do mv "$f" "`echo $f | tr "[:upper:]" "[:lower:]"`"; done'
 alias renameupper='for f in *; do mv "$f" "`echo $f | tr "[:lower:]" "[:upper:]"`"; done'
 alias enabletmux='export TMUXIFIER_TMUX_ITERM_ATTACH="-CC"'
@@ -72,6 +74,7 @@ alias v='vagrant'
 alias vs='vagrant status'
 alias vu='vagrant up'
 alias vu2='vagrant up --provider vmware_fusion'
+alias vd='vagrant destroy'
 alias vd='vagrant destroy -f'
 alias vh='vagrant halt'
 alias vsh='vagrant ssh'
@@ -84,7 +87,7 @@ alias b='brew'
 alias bs='brew search'
 alias bin='brew install'
 alias bun='brew uninstall'
-alias bcl='brew update && brew upgrade --all && brew cleanup && brew cask cleanup'
+alias bcl='brew update; brew upgrade --all; brew cleanup; brew cask cleanup'
 alias bc='brew cask'
 alias bcs='brew cask search'
 alias bcin='brew cask install'

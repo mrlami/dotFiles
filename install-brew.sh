@@ -19,6 +19,7 @@ brew install tmux
 brew install tree
 brew install wget
 brew install httpie
+brew install imagemagick
 
 brew install bash
 brew install zsh

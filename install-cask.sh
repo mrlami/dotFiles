@@ -9,13 +9,11 @@ brew cask doctor
 
 #fonts
 brew cask install font-blokk.rb
-brew cask install font-hack.rb
+brew cask install font-fira-code.rb font-fira-sans.rb font-fira-mono.rb font-fira-mono-for-powerline.rb
 brew cask install font-nexa
-brew cask install font-open-sans.rb
-brew cask install font-open-sans-condensed.rb
-brew cask install font-source-code-pro.rb
-brew cask install font-source-code-pro-for-powerline
-brew cask install font-ubuntu-mono-powerline
+brew cask install font-open-sans.rb font-open-sans-condensed.rb
+brew cask install font-source-code-pro.rb font-source-code-pro-for-powerline
+
 
 # utility apps
 brew cask install bartender
