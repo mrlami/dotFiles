@@ -42,8 +42,9 @@ brew cask install screenflow
 
 # media apps
 brew cask install audacity
+brew cask install amazon-music
 brew cask install vlc
-brew cask install vox
+brew cask install elmedia-player
 
 # office tools
 brew cask install macdown
@@ -52,6 +53,7 @@ brew cask install macdown
 brew cask install bittorrent-sync
 brew cask install dropbox
 brew cask install google-chrome #google-chrome-canary
+brew cask install opera-developer #opera
 brew cask install google-drive
 brew cask install transmission
 
