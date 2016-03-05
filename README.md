@@ -70,10 +70,6 @@ Run individual install commands
     install_php_apps
 
     # others
-    install_vagrant_plugins
-    setup_dropbox_app_backups
-
-    # others
     #install_vagrant_plugins
     #setup_dropbox_app_backups
     #setup_mac_defaults

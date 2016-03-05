@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # taps
+brew tap caskroom/cask
 brew tap homebrew/dupes
 brew tap homebrew/versions
 brew tap homebrew/homebrew-php

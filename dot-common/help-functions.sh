@@ -27,8 +27,8 @@ function cs() {
 
 function setup_dropbox_app_backups() {
     # Bartender
-    open -a "Bartender"
-    osascript -e 'quit app "Bartender"'
+    open -a "Bartender 2"
+    osascript -e 'quit app "Bartender 2"'
     mv ~/Library/Preferences/com.surteesstudios.Bartender.plist ~/Library/Preferences/com.surteesstudios.Bartender.bak.plist
     ln -sf ~/Dropbox/Apps/Bartender/com.surteesstudios.Bartender.plist ~/Library/Preferences/com.surteesstudios.Bartender.plist
     defaults read com.surteesstudios.Bartender
@@ -45,7 +45,7 @@ function setup_dropbox_app_backups() {
     open -a "Sublime Text"
     osascript -e 'quit app "Sublime Text"'
     mv ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User.orig.bak
-    ln -s ~/Dropbox/Apps/SublimeText/User
+    ln -s ~/Dropbox/Apps/SublimeText/User ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
 }
 
 function mac() {
