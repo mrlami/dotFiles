@@ -14,10 +14,13 @@ ln -sf ~/_bin/dot-files/.git_template ~/.git_template #template dir (for git hoo
 ln -sf ~/_bin/dot-files/nanorc ~/.nanorc #nano
 ln -sf ~/_bin/dot-files/tmux.conf ~/.tmux.conf #tmux
 
-# source rc files
+# source rc file
 echo "Sourcing aliased dotfiles..."
-source ~/.bashrc
-source ~/.zshrc
+if [ "$(echo $SHELL)" == "/bin/zsh" ]; then
+    source ~/.zshrc
+else
+    source ~/.bashrc
+fi
 
 echo '=============================================================='
 echo 'run "clean_map_setup" if this is a fresh mac installation'
