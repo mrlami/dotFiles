@@ -1,25 +1,26 @@
-# Folder view configuration files
+# folder view configuration files
 .DS_Store
 Desktop.ini
 
-# Thumbnail cache files
+# thumbnail cache files
 ._*
 Thumbs.db
 
-# Files that might appear on external disks
+# files that might appear on external disks
 .fseventsd
 .Spotlight-V100
 .Trashes
 
-# Package managers
+# package managers
 vendor
 node_modules
 bower_components
 
-# Miscellaneous application config files
-.idea
+# source control
+.git
+.svn
+vssver2.scc
+
+# misc apps / others
 .sass-cache
 .vagrant
-config.codekit
-vssver2.scc
-testlogin.php   # scbz specific

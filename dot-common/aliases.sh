@@ -72,7 +72,7 @@ alias gshow='git show --name-status' #check what files were changed in previous 
 # Vagrant
 alias v='vagrant'
 alias vs='vagrant status'
-alias vu='vagrant up'
+alias vu='vagrant up --provider virtualbox'
 alias vu2='vagrant up --provider vmware_fusion'
 alias vd='vagrant destroy'
 alias vd='vagrant destroy -f'

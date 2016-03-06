@@ -255,8 +255,8 @@ function install_vagrant_plugins() {
     vagrant plugin install vagrant-linode
     vagrant plugin install vagrant-vultr
 
-    vagrant plugin install vagrant-vmware-fusion
-    vagrant plugin license vagrant-vmware-fusion ~/Dropbox/Apps/_licenses/vagrant-vmware-fusion-license.lic
+    #vagrant plugin install vagrant-vmware-fusion
+    #vagrant plugin license vagrant-vmware-fusion ~/Dropbox/Apps/_licenses/vagrant-vmware-fusion-license.lic
 
     echo '--------------------------------------'
     echo 'you might want to install below boxes:'
