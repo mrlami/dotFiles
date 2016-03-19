@@ -81,6 +81,7 @@ brew cask install codekit
 brew cask install coderunner
 brew cask install dash
 brew cask install kaleidoscope
+brew cask install postman
 brew cask install rbtools
 
 brew cask install sketch

@@ -5,6 +5,10 @@ function enter() {
     cd $1
 }
 
+function recursively_delete_files_ending_with() {
+    find . -name "*$1" -type f -delete
+}
+
 function cs() {
     if [ "$1" = "bash" ]; then
         echo ' »» swithing shell to bash'
@@ -247,9 +251,7 @@ function install_vimrc_ultimate() {
 
 function install_vagrant_plugins() {
     # https://github.com/mitchellh/vagrant/wiki/Available-Vagrant-Plugins
-    vagrant plugin install vagrant-hostmanager
     vagrant plugin install vagrant-reload
-
     vagrant plugin install vagrant-aws
     vagrant plugin install vagrant-digitalocean
     vagrant plugin install vagrant-linode

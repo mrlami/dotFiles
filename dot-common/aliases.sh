@@ -26,11 +26,16 @@ alias dl="cd /apps/_code"
 alias mx="cd /apps/munetrix"
 alias sg="cd /apps/scigames"
 
+# Enable aliases to be sudo’ed
+alias sudo='sudo '
+
 # Shortcuts for misc commands
 alias cl="clear"
 alias clearcache="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;say cache flushed"
+alias cpd="cp -aR"
 alias p="ping -c 5"
 alias rmd="rm -rf"
+alias rdel="recursively_delete_files_ending_with"
 alias s='open -a "Sublime Text"'
 alias serve="php -S localhost:8000"     # use -t to specify different doc root
 alias updatehosts="sudo bash -c 'cat ~/_ssh/hosts > /private/etc/hosts'"
@@ -48,11 +53,21 @@ alias renameupper='for f in *; do mv "$f" "`echo $f | tr "[:lower:]" "[:upper:]"
 alias enabletmux='export TMUXIFIER_TMUX_ITERM_ATTACH="-CC"'
 alias disabletmux='export TMUXIFIER_TMUX_ITERM_ATTACH=""'
 
-# Enable aliases to be sudo’ed
-alias sudo='sudo '
-
 # Colored cat! // install Pygments first - "sudo easy_install Pygments"
 alias c='pygmentize -O style=monokai -f console256 -g'
+
+# Tmux & Tmuxifier
+alias mux='tmuxifier'
+
+# Node
+alias nlist='npm list -g --depth=0'
+
+# Laravel
+alias artisan='php artisan'
+alias homestead='~/.composer/vendor/bin/homestead'
+alias laravel='~/.composer/vendor/bin/laravel'
+alias lumen='~/.composer/vendor/bin/lumen'
+alias envoy='~/.composer/vendor/bin/envoy'
 
 # Git
 alias g='git'
@@ -66,8 +81,8 @@ alias gp='git push'
 alias gpl='git pull'
 alias gcl='git clone'
 alias gco='git checkout'
-alias gcomp='gl master..origin/master'  #check what commits have been added to upstream
-alias gshow='git show --name-status' #check what files were changed in previous commits
+alias glmaster='gl master..origin/master'  #check what commits have been added to upstream
+alias gchange='git show --name-status' #check what files were changed in previous commits
 
 # Vagrant
 alias v='vagrant'
@@ -92,18 +107,6 @@ alias bc='brew cask'
 alias bcs='brew cask search'
 alias bcin='brew cask install'
 alias bcun='brew cask uninstall'
-
-# Tmux & Tmuxifier
-alias mux='tmuxifier'
-
-# Node
-alias nlist='npm list -g --depth=0'
-
-# Laravel
-alias homestead='~/.composer/vendor/bin/homestead'
-alias laravel='~/.composer/vendor/bin/laravel'
-alias lumen='~/.composer/vendor/bin/lumen'
-alias envoy='~/.composer/vendor/bin/envoy'
 
 
 ## paths ##
