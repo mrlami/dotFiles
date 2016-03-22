@@ -82,6 +82,10 @@ function bar() {
         ln -sf ~/Dropbox/Apps/Bartender/com.surteesstudios.Bartender.time.plist ~/Library/Preferences/com.surteesstudios.Bartender.plist
         defaults read com.surteesstudios.Bartender
         echo "✓ loaded **time** bartendar settings"
+    elif [ "$1" = "pomo" ]; then
+        ln -sf ~/Dropbox/Apps/Bartender/com.surteesstudios.Bartender.pomo.plist ~/Library/Preferences/com.surteesstudios.Bartender.plist
+        defaults read com.surteesstudios.Bartender
+        echo "✓ loaded **time** bartendar settings"
     elif [ "$1" = "all" ]; then
         ln -sf ~/Dropbox/Apps/Bartender/com.surteesstudios.Bartender.all.plist ~/Library/Preferences/com.surteesstudios.Bartender.plist
         defaults read com.surteesstudios.Bartender
@@ -171,10 +175,10 @@ function install_node_apps() {
     nvm alias default node
 
     #install node apps
+    npm install -g pnpm
     npm install -g yo bower grunt-cli gulp
-    npm install -g browserify
-    npm install -g trash
-    npm install -g speed-test
+    npm install -g adonis-cli browserify forever nodemon pm2
+    npm install -g speed-test trash
 }
 
 function install_php_apps() {
@@ -273,9 +277,6 @@ function setup_mac_app_defaults() {
     ###############################################################################
     # Finder                                                                      #
     ###############################################################################
-    # Finder: show hidden files by default
-    #defaults write com.apple.finder AppleShowAllFiles -bool true
-
     # Finder: show all filename extensions
     defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
@@ -296,12 +297,6 @@ function setup_mac_app_defaults() {
 
     # Disable the warning when changing a file extension
     defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
-
-    # Enable spring loading for directories
-    #defaults write NSGlobalDomain com.apple.springing.enabled -bool true
-
-    # Remove the spring loading delay for directories
-    #defaults write NSGlobalDomain com.apple.springing.delay -float 0
 
     # Avoid creating .DS_Store files on network volumes
     defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
@@ -416,19 +411,6 @@ function setup_mac_app_defaults() {
 
     # Enable Debug Menu in the Mac App Store
     defaults write com.apple.appstore ShowDebugMenu -bool true
-
-
-    ###############################################################################
-    # Google Chrome & Google Chrome Canary                                        #
-    ###############################################################################
-
-    # Allow installing user scripts via GitHub Gist or Userscripts.org
-    defaults write com.google.Chrome ExtensionInstallSources -array "https://gist.githubusercontent.com/" "http://userscripts.org/*"
-    defaults write com.google.Chrome.canary ExtensionInstallSources -array "https://gist.githubusercontent.com/" "http://userscripts.org/*"
-
-    # Disable the all too sensitive backswipe
-    defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
-    defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool false
 
 
     ###############################################################################
