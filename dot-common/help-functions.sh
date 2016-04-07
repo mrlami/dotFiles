@@ -1,14 +1,5 @@
 ## functions ##
 
-function enter() {
-    mkdir $1
-    cd $1
-}
-
-function recursively_delete_files_ending_with() {
-    find . -name "*$1" -type f -delete
-}
-
 function cs() {
     if [ "$1" = "bash" ]; then
         echo ' »» swithing shell to bash'
@@ -27,6 +18,23 @@ function cs() {
         echo ' »» cs zsh'
         echo '...........'
     fi
+}
+
+function enter() {
+    mkdir $1
+    cd $1
+}
+
+function recursively_delete_files_ending_with() {
+    find . -name "*$1" -type f -delete
+}
+
+function rename_git_branch() {
+    # $1 - old branch name, $2 - new branch name
+
+    git branch -m $1 $2     #rename local
+    git push origin :$1 $2  #delete old remote branch and push new local branch
+    git push origin -u $2   #reset upstream branch to new local branch
 }
 
 function setup_dropbox_app_backups() {
@@ -176,8 +184,8 @@ function install_node_apps() {
 
     #install node apps
     npm install -g pnpm
-    npm install -g yo bower grunt-cli gulp
-    npm install -g adonis-cli browserify forever nodemon pm2
+    npm install -g yo bower gulp
+    npm install -g adonis-cli pm2
     npm install -g speed-test trash
 }
 
@@ -272,8 +280,8 @@ function install_vagrant_plugins() {
     echo '--------------------------------------'
 }
 
-#reference https://github.com/kevinSuttle/OSXDefaults
 function setup_mac_app_defaults() {
+    #reference https://github.com/kevinSuttle/OSXDefaults
     ###############################################################################
     # Finder                                                                      #
     ###############################################################################

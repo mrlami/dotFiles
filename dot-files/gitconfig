@@ -25,21 +25,6 @@
 	untracked = cyan
 [push]
 	default = simple
-
-#remove below if Kaleidoscope is not installed
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-[merge]
-	tool = Kaleidoscope
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[diff]
-	tool = Kaleidoscope
-[mergetool]
-	prompt = true
-	keepBackup = true
-[difftool]
-	prompt = true
 [init]
 	templatedir = ~/.git_template
 [filter "lfs"]
@@ -47,17 +32,17 @@
 	smudge = git lfs smudge %f
 	required = true
 
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	prompt = true
+	keepBackup = true
+[merge]
+	tool = Kaleidoscope
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+	prompt = true
+[diff]
+	tool = Kaleidoscope
 [alias]
 	# List contributors with number of commits
 	contributors = shortlog --summary --numbered
-
-    # Generate info for CM (currently updates only and SCBZ only)
-    cmi = "!f() { \
-        REPO=$(git remote show -n origin | grep Push | cut -d : -f 2- | cut -d \"/\" -f 4 -f 5); \
-		LASTCOMMIT=$(git log --pretty=format:'%H' -n 1); \
-		REPOPATH=$(echo $REPO | cut -d \".\" -f 1 | awk '{print tolower($0)}'); \
-		SRVPATH='/var/websites/'$REPOPATH'/'; \
-        git diff --name-only $1 $2 | xargs -IREPLACE echo $'Update '$SRVPATH'REPLACE\nWith ['$REPO'] REPLACE\n'; \
-		echo 'commit '$LASTCOMMIT; \
-		echo '\n\nIn source control ['$REPO'] master branch\ncommit ' $LASTCOMMIT; \
-        }; f"

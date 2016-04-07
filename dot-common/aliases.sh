@@ -95,7 +95,7 @@ alias vh='vagrant halt'
 alias vsh='vagrant ssh'
 alias vsus='vagrant suspend'
 alias vres='vagrant resume'
-alias vg='vagrant global-status --prune'
+alias vg='vagrant global-status'
 
 # Homebrew & Cask
 alias b='brew'
