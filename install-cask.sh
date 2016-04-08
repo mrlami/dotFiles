@@ -69,7 +69,6 @@ brew cask install vagrant
 brew cask install vagrant-manager
 
 brew cask install cornerstone
-brew cask install gitup
 brew cask install tower
 
 brew cask install navicat-premium
@@ -86,10 +85,6 @@ brew cask install rbtools
 
 brew cask install sketch
 brew cask install sublime-text3
-
-# network tools
-#brew cask install namebench
-#brew cask install xquartz wireshark
 
 
 brew cask cleanup
