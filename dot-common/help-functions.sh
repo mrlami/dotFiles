@@ -184,7 +184,7 @@ function install_node_apps() {
 
     #install node apps
     npm install -g pnpm
-    npm install -g yo bower gulp
+    npm install -g yo gulp grunt-cli bower
     npm install -g adonis-cli pm2
     npm install -g speed-test trash
 }

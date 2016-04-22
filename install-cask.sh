@@ -43,7 +43,6 @@ brew cask install screenflow
 # media apps
 brew cask install audacity
 brew cask install vlc
-brew cask install elmedia-player
 
 # office tools
 brew cask install macdown
