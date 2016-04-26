@@ -39,7 +39,7 @@ brew install composer
 #brew install rethinkdb
 
 brew install php70 php70-mcrypt
-brew install boris codeception
+brew install codeception psysh
 
 
 brew cleanup

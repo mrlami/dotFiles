@@ -36,8 +36,9 @@ alias cpd="cp -aR"
 alias p="ping -c 5"
 alias rmd="rm -rf"
 alias rdel="recursively_delete_files_ending_with"
-alias s='open -a "Sublime Text"'
 alias serve="php -S localhost:8000"     # use -t to specify different doc root
+alias subl='open -a "Sublime Text"'
+alias psh="psysh"
 alias updatehosts="sudo bash -c 'cat ~/_ssh/hosts > /private/etc/hosts'"
 
 alias aliases="c ~/_bin/dot-common/aliases.sh"
