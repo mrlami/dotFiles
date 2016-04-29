@@ -183,10 +183,9 @@ function install_node_apps() {
     nvm alias default node
 
     #install node apps
-    npm install -g pnpm
-    npm install -g yo gulp grunt-cli bower
+    npm install -g pnpm speed-test trash-cli empty-trash-cli
+    npm install -g bower grunt-cli gulp yo
     npm install -g adonis-cli pm2
-    npm install -g speed-test trash
 }
 
 function install_php_apps() {
@@ -425,7 +424,7 @@ function setup_mac_app_defaults() {
     # Transmission.app                                                            #
     ###############################################################################
 
-    # Use `~/Downloads/_transit/torrents` to store incomplete downloads
+    # Use `~/Downloads/_stuff/torrents` to store incomplete downloads
     mkdir -p ~/Downloads/_stuff/torrents
     defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
     defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Downloads/_stuff/torrents"

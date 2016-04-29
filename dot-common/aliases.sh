@@ -38,10 +38,13 @@ alias rmd="rm -rf"
 alias rdel="recursively_delete_files_ending_with"
 alias serve="php -S localhost:8000"     # use -t to specify different doc root
 alias subl='open -a "Sublime Text"'
+alias startpostgres='postgres -D /usr/local/var/postgres'
 alias psh="psysh"
 alias updatehosts="sudo bash -c 'cat ~/_ssh/hosts > /private/etc/hosts'"
 
 alias aliases="c ~/_bin/dot-common/aliases.sh"
+alias brews="c ~/_bin/install-brew.sh"
+alias casks="c ~/_bin/install-cask.sh"
 alias functionz="c ~/_bin/dot-common/help-functions.sh"
 alias hosts="c ~/_ssh/hosts"
 alias sourcebash="source ~/.bashrc"
@@ -74,7 +77,7 @@ alias envoy='~/.composer/vendor/bin/envoy'
 alias g='git'
 alias gs='git status -sb'
 alias gl='git log --oneline --decorate --graph' #-5 --author mrlami --before "Sat Aug 30 2014"
-alias gl2='git shortlog -s -n -e'       #-s squash commit msgs into the # of commits, -n sorts the list by # of commits, -e append emails
+alias gl2='git shortlog -s -n -e' #-s squash commit msgs into the # of commits, -n sorts the list by # of commits, -e append emails
 alias ga='git add --all'
 alias gc='git commit -m'
 alias gcamend='git commit --amend -m'
@@ -82,20 +85,14 @@ alias gp='git push'
 alias gpl='git pull'
 alias gcl='git clone'
 alias gco='git checkout'
-alias glmaster='gl master..origin/master'  #check what commits have been added to upstream
-alias gchange='git show --name-status' #check what files were changed in previous commits
 
 # Vagrant
 alias v='vagrant'
 alias vs='vagrant status'
 alias vu='vagrant up --provider virtualbox'
-alias vu2='vagrant up --provider vmware_fusion'
-alias vd='vagrant destroy'
 alias vd='vagrant destroy -f'
 alias vh='vagrant halt'
 alias vsh='vagrant ssh'
-alias vsus='vagrant suspend'
-alias vres='vagrant resume'
 alias vg='vagrant global-status'
 
 # Homebrew & Cask
@@ -113,9 +110,7 @@ alias bcun='brew cask uninstall'
 ## paths ##
 #homebrew
 export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
-export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+export NVM_DIR=~/.nvm && source $(brew --prefix nvm)/nvm.sh
 
 #tmuxifier
 export PATH="$HOME/.tmuxifier/bin:$PATH"

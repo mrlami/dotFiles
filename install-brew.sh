@@ -30,13 +30,14 @@ brew install zsh-completions
 
 brew install mycli
 brew install ngrok
+brew install pgcli
 
 brew install go
 brew install nvm
 brew install composer
 
-#brew install postgresql pgcli
-#brew install rethinkdb
+brew install postgresql
+brew install rethinkdb
 
 brew install php70 php70-mcrypt
 brew install codeception psysh
