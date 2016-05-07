@@ -185,17 +185,17 @@ function install_node_apps() {
     #install node apps
     npm install -g pnpm speed-test trash-cli empty-trash-cli
     npm install -g bower grunt-cli gulp yo
-    npm install -g adonis-cli pm2
+    npm install -g adonis-cli pm2 typescript
 }
 
 function install_php_apps() {
     composer global require "hirak/prestissimo" #parallel install plugin (speeds up composer)
     composer global require "fabpot/php-cs-fixer"
 
-    composer global require "laravel/homestead"
     composer global require "laravel/installer"
-    composer global require "laravel/lumen-installer"
     composer global require "laravel/envoy=~1.0"
+    composer global require "laravel/homestead"
+    composer global require "laravel/valet"
 }
 
 function install_tmuxifier() {

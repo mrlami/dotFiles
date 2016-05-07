@@ -22,7 +22,7 @@ alias hssh="cd ~/_ssh"
 alias d="cd ~/Downloads"
 alias a="cd /apps"
 alias code="cd /apps/_code"
-alias dl="cd /apps/_code"
+alias dl="cd /apps/_code/logiq-one"
 alias mx="cd /apps/munetrix"
 alias sg="cd /apps/scigames"
 
@@ -32,14 +32,16 @@ alias sudo='sudo '
 # Shortcuts for misc commands
 alias cl="clear"
 alias clearcache="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;say cache flushed"
-alias cpd="cp -aR"
+alias cpd="cp -aR" #copy directory
 alias p="ping -c 5"
-alias rmd="rm -rf"
-alias rdel="recursively_delete_files_ending_with"
-alias serve="php -S localhost:8000"     # use -t to specify different doc root
-alias subl='open -a "Sublime Text"'
-alias startpostgres='postgres -D /usr/local/var/postgres'
 alias psh="psysh"
+alias rmd="rm -rf" #delete directory
+alias rdel="recursively_delete_files_ending_with"
+alias serve="php -S localhost:8000" # use -t to specify different doc root
+alias subl='open -a "Sublime Text"'
+alias startmaria='mysql.server start'
+alias startpostgres='postgres -D /usr/local/var/postgres'
+alias startredis='redis-server /usr/local/etc/redis.conf'
 alias updatehosts="sudo bash -c 'cat ~/_ssh/hosts > /private/etc/hosts'"
 
 alias aliases="c ~/_bin/dot-common/aliases.sh"
@@ -67,20 +69,17 @@ alias mux='tmuxifier'
 alias nlist='npm list -g --depth=0'
 
 # Laravel
-alias artisan='php artisan'
-alias homestead='~/.composer/vendor/bin/homestead'
-alias laravel='~/.composer/vendor/bin/laravel'
-alias lumen='~/.composer/vendor/bin/lumen'
-alias envoy='~/.composer/vendor/bin/envoy'
+alias art='php artisan'
 
 # Git
 alias g='git'
 alias gs='git status -sb'
 alias gl='git log --oneline --decorate --graph' #-5 --author mrlami --before "Sat Aug 30 2014"
 alias gl2='git shortlog -s -n -e' #-s squash commit msgs into the # of commits, -n sorts the list by # of commits, -e append emails
+alias gl3="git log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %cr) %Cred%d' --date-order" #whos been working on last 10 commits
 alias ga='git add --all'
 alias gc='git commit -m'
-alias gcamend='git commit --amend -m'
+alias gc2='git commit -m --amend'
 alias gp='git push'
 alias gpl='git pull'
 alias gcl='git clone'
@@ -108,7 +107,8 @@ alias bcun='brew cask uninstall'
 
 
 ## paths ##
-#homebrew
+#homebrew (nvm, composer)
+export PATH="$HOME/.composer/vendor/bin:$PATH"
 export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 export NVM_DIR=~/.nvm && source $(brew --prefix nvm)/nvm.sh
 
