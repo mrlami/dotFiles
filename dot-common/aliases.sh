@@ -37,6 +37,8 @@ alias p="ping -c 5"
 alias psh="psysh"
 alias rmd="rm -rf" #delete directory
 alias rdel="recursively_delete_files_ending_with"
+alias renamelower='for f in *; do mv "$f" "`echo $f | tr "[:upper:]" "[:lower:]"`"; done'
+alias renameupper='for f in *; do mv "$f" "`echo $f | tr "[:lower:]" "[:upper:]"`"; done'
 alias serve="php -S localhost:8000" # use -t to specify different doc root
 alias subl='open -a "Sublime Text"'
 alias startmaria='mysql.server start'
@@ -54,16 +56,8 @@ alias sourcezsh="source ~/.zshrc"
 alias sourcebin="source ~/_bin/install.sh"
 alias sourcessh="source ~/_ssh/install.sh"
 
-alias renamelower='for f in *; do mv "$f" "`echo $f | tr "[:upper:]" "[:lower:]"`"; done'
-alias renameupper='for f in *; do mv "$f" "`echo $f | tr "[:lower:]" "[:upper:]"`"; done'
-alias enabletmux='export TMUXIFIER_TMUX_ITERM_ATTACH="-CC"'
-alias disabletmux='export TMUXIFIER_TMUX_ITERM_ATTACH=""'
-
 # Colored cat! // install Pygments first - "sudo easy_install Pygments"
 alias c='pygmentize -O style=monokai -f console256 -g'
-
-# Tmux & Tmuxifier
-alias mux='tmuxifier'
 
 # Node
 alias nlist='npm list -g --depth=0'
@@ -76,7 +70,7 @@ alias g='git'
 alias gs='git status -sb'
 alias gl='git log --oneline --decorate --graph' #-5 --author mrlami --before "Sat Aug 30 2014"
 alias gl2='git shortlog -s -n -e' #-s squash commit msgs into the # of commits, -n sorts the list by # of commits, -e append emails
-alias gl3="git log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %cr) %Cred%d' --date-order" #whos been working on last 10 commits
+alias gl3="git log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %cr) %Cred%d' --date-order" #whos been working on last 10 commits (basically who's working on what now)
 alias ga='git add --all'
 alias gc='git commit -m'
 alias gc2='git commit -m --amend'
@@ -109,10 +103,4 @@ alias bcun='brew cask uninstall'
 ## paths ##
 #homebrew (nvm, composer)
 export PATH="$HOME/.composer/vendor/bin:$PATH"
-export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 export NVM_DIR=~/.nvm && source $(brew --prefix nvm)/nvm.sh
-
-#tmuxifier
-export PATH="$HOME/.tmuxifier/bin:$PATH"
-export TMUXIFIER_LAYOUT_PATH="$HOME/_bin/tmux-layouts"
-eval "$(tmuxifier init -)"
