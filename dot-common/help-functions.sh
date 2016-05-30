@@ -185,7 +185,8 @@ function install_node_apps() {
     #install node apps
     npm install -g pnpm speed-test trash-cli empty-trash-cli
     npm install -g bower grunt-cli gulp yo
-    npm install -g adonis-cli pm2 typescript
+    npm install -g adonis-cli pm2
+    npm install -g mklicense
 }
 
 function install_php_apps() {

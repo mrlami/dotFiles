@@ -31,7 +31,6 @@ brew install zsh
 brew install zsh-completions
 
 brew install mycli
-brew install ngrok
 brew install pgcli
 
 brew install go

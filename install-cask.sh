@@ -50,10 +50,10 @@ brew cask install macdown
 # cloud & web apps
 brew cask install bittorrent-sync
 brew cask install dropbox
-brew cask install google-chrome #google-chrome-canary
-brew cask install opera
+brew cask install google-chrome google-chrome-canary
 brew cask install google-drive
 brew cask install transmission
+brew cask install vivaldi
 
 # communication tools
 #brew cask install hipchat
@@ -79,6 +79,7 @@ brew cask install codekit
 brew cask install coderunner
 brew cask install dash
 brew cask install kaleidoscope
+brew cask install ngrok
 brew cask install postman
 brew cask install rbtools
 

@@ -59,10 +59,11 @@ alias sourcessh="source ~/_ssh/install.sh"
 # Colored cat! // install Pygments first - "sudo easy_install Pygments"
 alias c='pygmentize -O style=monokai -f console256 -g'
 
-# Node
+# NPM & Node
 alias nlist='npm list -g --depth=0'
 
-# Laravel
+# Composer & PHP
+alias clist='composer global show'
 alias art='php artisan'
 
 # Git
@@ -78,6 +79,8 @@ alias gp='git push'
 alias gpl='git pull'
 alias gcl='git clone'
 alias gco='git checkout'
+alias gpspring='gp spring && gp'
+alias gpall='gp && gp spring && gp github'
 
 # Vagrant
 alias v='vagrant'
@@ -101,6 +104,5 @@ alias bcun='brew cask uninstall'
 
 
 ## paths ##
-#homebrew (nvm, composer)
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 export NVM_DIR=~/.nvm && source $(brew --prefix nvm)/nvm.sh
